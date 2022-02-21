@@ -1,0 +1,25 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 94px;
+
+    .left_header {
+        display: flex;
+
+        width: 119px;
+        height: 54px;
+        margin: 20px;
+        .p_left_header {
+            font-size: 18px;
+            color: #29a19c;
+            line-height: 22px;
+            align-self: center;
+            margin-left: 10px;
+        }
+    }
+    #menu {
+        width: 44px;
+        height: 44px;
+        margin: 25px 20px 25px 0px;
+    }
+}
