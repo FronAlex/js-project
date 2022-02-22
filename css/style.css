@@ -32,4 +32,224 @@ header #menu {
   height: 44px;
   margin: 25px 20px 25px 0px;
 }
+
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 169px;
+  margin-bottom: 169px;
+}
+
+.center .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 350px;
+  height: 375px;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 10px 25px rgba(29, 52, 54, 0.08);
+          box-shadow: 0px 10px 25px rgba(29, 52, 54, 0.08);
+  border-radius: 10px;
+}
+
+.center .card .text_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 310px;
+  height: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.center .card .text_container .text-center {
+  margin: 0;
+  font-size: 18px;
+  line-height: 25px;
+  color: #29a19c;
+}
+
+.center .card .form-group1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.center .card .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  width: 310px;
+  height: 39px;
+  border: 1px solid rgba(40, 40, 70, 0.1);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.center .card .form-group .form-control {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  border: 0;
+  width: 270px;
+}
+
+.center .card .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 25px;
+  background: #29a19c;
+  border-radius: 8px;
+  color: #fafafa;
+  font-size: 16px;
+  line-height: 22px;
+  border: 0;
+}
+
+.center .card .registration {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #000000;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.center .card .registration #regist {
+  color: #29a19c;
+  text-decoration: none;
+}
+
+.center .card .separation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 310px;
+  height: 22px;
+}
+
+.center .card .separation .hr {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background: #282846;
+  opacity: 0.5;
+  width: 125px;
+  height: 0;
+}
+
+.center .card .separation .separation_p {
+  margin: 0;
+}
+
+.center .card .social_network {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+}
+
+.center .card .social_network .network {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 84px;
+}
+
+.center .card .social_network .network .img_network {
+  width: 32px;
+  height: 32px;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 409px;
+  height: 24px;
+  font-size: 14px;
+  line-height: 19px;
+  color: #282846;
+}
+
+footer .footer .confidentiality {
+  font-size: 14px;
+  line-height: 19px;
+  color: #282846;
+}
+
+footer .footer .copyright {
+  width: 24px;
+  height: 24px;
+  opacity: 0.5;
+  margin-right: 10px;
+}
+
+footer .footer .copy {
+  margin-right: 10px;
+  vertical-align: text-top;
+}
 /*# sourceMappingURL=style.css.map */

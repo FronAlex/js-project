@@ -23,3 +23,143 @@ header {
         margin: 25px 20px 25px 0px;
     }
 }
+
+.center {
+    display: flex;
+    justify-content: center;
+    margin-top: 169px;
+    margin-bottom: 169px;
+    .card {
+        display: flex;
+        justify-content: center;
+        width: 350px;
+        height: 375px;
+        background: #ffffff;
+
+        box-shadow: 0px 10px 25px rgba(29, 52, 54, 0.08);
+        border-radius: 10px;
+        .text_container {
+            display: flex;
+            justify-content: center;
+            width: 310px;
+            height: 25px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            .text-center {
+                margin: 0;
+                font-size: 18px;
+                line-height: 25px;
+                color: #29a19c;
+            }
+        }
+        .form-group1 {
+            display: flex;
+            justify-content: center;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 10px 15px;
+            margin-bottom: 20px;
+            width: 310px;
+            height: 39px;
+            border: 1px solid rgba(40, 40, 70, 0.1);
+            box-sizing: border-box;
+            border-radius: 8px;
+            .form-control {
+                flex: none;
+                border: 0;
+                width: 270px;
+            }
+        }
+        .btn {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 25px;
+            background: #29a19c;
+            border-radius: 8px;
+            color: #fafafa;
+            font-size: 16px;
+            line-height: 22px;
+            border: 0;
+        }
+
+        .registration {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            color: #000000;
+            font-size: 12px;
+            line-height: 16px;
+            #regist {
+                color: #29a19c;
+                text-decoration: none;
+            }
+        }
+        .separation {
+            display: flex;
+            justify-content: center;
+            width: 310px;
+            height: 22px;
+            .hr {
+                align-self: center;
+                background: #282846;
+                opacity: 0.5;
+                width: 125px;
+                height: 0;
+            }
+            .separation_p {
+                margin: 0;
+            }
+        }
+        .social_network {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            .network {
+                display: flex;
+                justify-content: space-between;
+                width: 84px;
+                .img_network {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 409px;
+        height: 24px;
+        font-size: 14px;
+        line-height: 19px;
+        color: #282846;
+
+        .confidentiality {
+            font-size: 14px;
+            line-height: 19px;
+            color: #282846;
+        }
+        .copyright {
+            width: 24px;
+            height: 24px;
+            opacity: 0.5;
+            margin-right: 10px;
+        }
+        .copy {
+            margin-right: 10px;
+            vertical-align: text-top;
+        }
+    }
+}
