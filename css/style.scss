@@ -11,6 +11,7 @@ header {
         margin: 20px;
         .p_left_header {
             font-size: 18px;
+            font-family: Montserrat;
             color: #29a19c;
             line-height: 22px;
             align-self: center;
@@ -47,6 +48,7 @@ header {
             margin-bottom: 20px;
             .text-center {
                 margin: 0;
+                font-family: Nunito;
                 font-size: 18px;
                 line-height: 25px;
                 color: #29a19c;
@@ -90,6 +92,7 @@ header {
         .registration {
             display: flex;
             justify-content: center;
+            font-family: Nunito;
             margin-top: 20px;
             margin-bottom: 20px;
             color: #000000;
@@ -139,6 +142,7 @@ footer {
     .footer {
         display: flex;
         justify-content: space-between;
+        font-family: Nunito;
         align-items: center;
         width: 409px;
         height: 24px;

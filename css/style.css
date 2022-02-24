@@ -19,6 +19,7 @@ header .left_header {
 
 header .left_header .p_left_header {
   font-size: 18px;
+  font-family: Montserrat;
   color: #29a19c;
   line-height: 22px;
   -ms-flex-item-align: center;
@@ -74,6 +75,7 @@ header #menu {
 
 .center .card .text_container .text-center {
   margin: 0;
+  font-family: Nunito;
   font-size: 18px;
   line-height: 25px;
   color: #29a19c;
@@ -147,6 +149,7 @@ header #menu {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-family: Nunito;
   margin-top: 20px;
   margin-bottom: 20px;
   color: #000000;
@@ -225,6 +228,7 @@ footer .footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  font-family: Nunito;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

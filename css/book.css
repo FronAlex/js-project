@@ -1,0 +1,166 @@
+.menu {
+    width: 211px;
+    height: 900px;
+    border: 1px solid red;
+    margin-left: 20px;
+}
+
+.menu .left_header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 119px;
+    height: 54px;
+    margin: 20px;
+    margin-left: 0;
+}
+
+.menu .left_header .p_left_header {
+    font-size: 18px;
+    font-family: Montserrat;
+    color: #29a19c;
+    line-height: 22px;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    margin-left: 10px;
+}
+
+.menu .categories {
+    width: 212px;
+    height: 283px;
+}
+
+.menu .categories .h1 {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    color: #29a19c;
+}
+
+.menu .categories .subcategory {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    height: 22px;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 30px;
+    color: #282846;
+}
+
+.menu .categories .subcategory .ico {
+    width: 18px;
+    height: 18px;
+    vertical-align: sub;
+    margin-right: 10px;
+}
+
+.menu .categories .subcategory .illumination {
+    display: none;
+    width: 30px;
+    height: 18px;
+    background: #29a19c;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.menu .categories .addition {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 22px;
+    width: 95px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #29a19c;
+}
+
+.menu .categories .addition .ico1 {
+    width: 18px;
+    height: 18px;
+    vertical-align: sub;
+    margin-right: 10px;
+}
+
+.menu .data {
+    width: 113px;
+    height: 127px;
+    margin-top: 60px;
+}
+
+.menu .data .h_1 {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    color: #29a19c;
+}
+
+.menu .data .data2 {
+    margin-bottom: 30px;
+}
+
+.menu .data .data1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 22px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #282846;
+}
+
+.menu .data .data1 .ico2 {
+    width: 18px;
+    height: 18px;
+    vertical-align: sub;
+    margin-right: 10px;
+}
+
+.menu .exid {
+    height: 216px;
+    margin-top: 60px;
+    border: 1px solid red;
+}
+
+.menu .exid .star {
+    color: #29a19c !important;
+}
+
+.menu .exid .exid_menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    margin: 20px 0 20px 0;
+    color: #282846;
+}
+
+.menu .exid .exid_menu .ico3 {
+    width: 18px;
+    height: 18px;
+    vertical-align: sub;
+    margin-right: 10px;
+}
