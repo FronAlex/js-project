@@ -1,68 +1,190 @@
 body {
-    display: flex;
     background: #e5e5e5;
+    display: flex;
 }
-header {
+
+@mixin successestitleHeader {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    max-width: 1068px;
+    max-width: 529px;
     width: 100%;
-    height: 44px;
-    border: 1px solid red;
+    height: 25px;
+    margin-top: 20px;
+}
+@mixin successesTitle {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #29a19c;
+    margin: 0;
+}
+
+@mixin ellipsis {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 28px;
+}
+@mixin ellipsisSpan {
+    display: flex;
+    justify-content: space-between;
+    width: 6px;
+    height: 6px;
+    background: #282846;
+    border-radius: 50px;
+}
+
+.mainUnit {
+    max-width: 1069px;
+    width: 100%;
+    height: 844px;
+    border: 1px solid blue;
     margin-left: 70px;
     margin-top: 20px;
-    .newTask {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 8px;
-        width: 186px;
-        height: 42px;
-        background-color: #29a19c;
 
-        .cross {
-            margin-right: 10px;
-            width: 18px;
-            height: 18px;
-        }
-        .crossP {
-            font-family: Nunito;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 16px;
-            line-height: 22px;
-            color: #fafafa;
-        }
-    }
-    .Times_of_Day {
-        width: 24px;
-        height: 24px;
-        opacity: 0.7;
-    }
-    .user {
+    header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 294px;
+        max-width: 1068px;
+        width: 100%;
         height: 44px;
+        border: 1px solid red;
 
-        .userName {
-            font-family: Nunito;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 16px;
-            line-height: 22px;
-            color: #282846;
-        }
-        .userImg {
-            width: 44px;
-            height: 44px;
-        }
+        .newTask {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            width: 186px;
+            height: 42px;
+            background-color: #29a19c;
 
-        .JackdawSpn {
+            .cross {
+                margin-right: 10px;
+                width: 18px;
+                height: 18px;
+            }
+            .crossP {
+                font-family: Nunito;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 22px;
+                color: #fafafa;
+            }
+        }
+        .Times_of_Day {
             width: 24px;
             height: 24px;
+            opacity: 0.7;
+        }
+        .user {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 294px;
+            height: 44px;
+
+            .userName {
+                font-family: Nunito;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 22px;
+                color: #282846;
+            }
+            .userImg {
+                width: 44px;
+                height: 44px;
+            }
+
+            .JackdawSpn {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+    .tasks {
+        max-width: 566px;
+        width: 100%;
+        height: 715px;
+        margin-top: 30px;
+        border: 1px solid rgb(9, 255, 0);
+
+        .successes {
+            max-width: 566px;
+            width: 100%;
+            height: 211px;
+            text-align: -webkit-center;
+
+            .successestitleHeader {
+                @include successestitleHeader;
+                .successesTitle {
+                    @include successesTitle;
+                }
+                .ellipsis {
+                    @include ellipsis;
+                    .ellipsisSpan {
+                        @include ellipsisSpan;
+                    }
+                }
+            }
+            .taskBoard {
+                display: flex;
+                justify-content: space-between;
+                max-width: 529px;
+                width: 100%;
+                height: 126px;
+                margin-top: 5px;
+                .taskBoard_1 {
+                    .taskBoardP {
+                        font-family: Nunito;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 12px;
+                        line-height: 16px;
+                        color: #282846;
+                    }
+                    .rangeOfTasks {
+                        border: 1px solid #29a19c;
+                        box-sizing: border-box;
+                        border-radius: 200px;
+                        background: #ffffff;
+                        width: 100px;
+                        height: 100px;
+                        .meaning {
+                            font-family: Nunito;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 36px;
+                            line-height: 49px;
+                            color: #29a19c;
+                            margin-top: 12px;
+                        }
+                    }
+                }
+            }
+        }
+        .activeTasks {
+            max-width: 566px;
+            width: 100%;
+            height: 474px;
+            border: 1px solid #20302f;
+            .successestitleHeader {
+                @include successestitleHeader;
+                .successesTitle {
+                    @include successesTitle;
+                }
+                .ellipsis {
+                    @include ellipsis;
+                    .ellipsisSpan {
+                        @include ellipsisSpan;
+                    }
+                }
+            }
         }
     }
 }

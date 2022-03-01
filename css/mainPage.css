@@ -1,11 +1,20 @@
 body {
+  background: #e5e5e5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: #e5e5e5;
 }
 
-header {
+.mainUnit {
+  max-width: 1069px;
+  width: 100%;
+  height: 844px;
+  border: 1px solid blue;
+  margin-left: 70px;
+  margin-top: 20px;
+}
+
+.mainUnit header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -19,11 +28,9 @@ header {
   width: 100%;
   height: 44px;
   border: 1px solid red;
-  margin-left: 70px;
-  margin-top: 20px;
 }
 
-header .newTask {
+.mainUnit header .newTask {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,13 +46,13 @@ header .newTask {
   background-color: #29a19c;
 }
 
-header .newTask .cross {
+.mainUnit header .newTask .cross {
   margin-right: 10px;
   width: 18px;
   height: 18px;
 }
 
-header .newTask .crossP {
+.mainUnit header .newTask .crossP {
   font-family: Nunito;
   font-style: normal;
   font-weight: 600;
@@ -54,13 +61,13 @@ header .newTask .crossP {
   color: #fafafa;
 }
 
-header .Times_of_Day {
+.mainUnit header .Times_of_Day {
   width: 24px;
   height: 24px;
   opacity: 0.7;
 }
 
-header .user {
+.mainUnit header .user {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -74,7 +81,7 @@ header .user {
   height: 44px;
 }
 
-header .user .userName {
+.mainUnit header .user .userName {
   font-family: Nunito;
   font-style: normal;
   font-weight: 600;
@@ -83,13 +90,173 @@ header .user .userName {
   color: #282846;
 }
 
-header .user .userImg {
+.mainUnit header .user .userImg {
   width: 44px;
   height: 44px;
 }
 
-header .user .JackdawSpn {
+.mainUnit header .user .JackdawSpn {
   width: 24px;
   height: 24px;
+}
+
+.mainUnit .tasks {
+  max-width: 566px;
+  width: 100%;
+  height: 715px;
+  margin-top: 30px;
+  border: 1px solid #09ff00;
+}
+
+.mainUnit .tasks .successes {
+  max-width: 566px;
+  width: 100%;
+  height: 211px;
+  text-align: -webkit-center;
+}
+
+.mainUnit .tasks .successes .successestitleHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 529px;
+  width: 100%;
+  height: 25px;
+  margin-top: 20px;
+}
+
+.mainUnit .tasks .successes .successestitleHeader .successesTitle {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  color: #29a19c;
+  margin: 0;
+}
+
+.mainUnit .tasks .successes .successestitleHeader .ellipsis {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 28px;
+}
+
+.mainUnit .tasks .successes .successestitleHeader .ellipsis .ellipsisSpan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 6px;
+  height: 6px;
+  background: #282846;
+  border-radius: 50px;
+}
+
+.mainUnit .tasks .successes .taskBoard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 529px;
+  width: 100%;
+  height: 126px;
+  margin-top: 5px;
+}
+
+.mainUnit .tasks .successes .taskBoard .taskBoard_1 .taskBoardP {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #282846;
+}
+
+.mainUnit .tasks .successes .taskBoard .taskBoard_1 .rangeOfTasks {
+  border: 1px solid #29a19c;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 200px;
+  background: #ffffff;
+  width: 100px;
+  height: 100px;
+}
+
+.mainUnit .tasks .successes .taskBoard .taskBoard_1 .rangeOfTasks .meaning {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 49px;
+  color: #29a19c;
+  margin-top: 12px;
+}
+
+.mainUnit .tasks .activeTasks {
+  max-width: 566px;
+  width: 100%;
+  height: 474px;
+  border: 1px solid #20302f;
+}
+
+.mainUnit .tasks .activeTasks .successestitleHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 529px;
+  width: 100%;
+  height: 25px;
+  margin-top: 20px;
+}
+
+.mainUnit .tasks .activeTasks .successestitleHeader .successesTitle {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  color: #29a19c;
+  margin: 0;
+}
+
+.mainUnit .tasks .activeTasks .successestitleHeader .ellipsis {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 28px;
+}
+
+.mainUnit .tasks .activeTasks .successestitleHeader .ellipsis .ellipsisSpan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 6px;
+  height: 6px;
+  background: #282846;
+  border-radius: 50px;
 }
 /*# sourceMappingURL=mainPage.css.map */
