@@ -1,5 +1,6 @@
+@charset "UTF-8";
 body {
-  background: #e5e5e5;
+  background: #fafafa;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9,7 +10,6 @@ body {
   max-width: 1069px;
   width: 100%;
   height: 844px;
-  border: 1px solid blue;
   margin-left: 70px;
   margin-top: 20px;
 }
@@ -27,7 +27,6 @@ body {
   max-width: 1068px;
   width: 100%;
   height: 44px;
-  border: 1px solid red;
 }
 
 .mainUnit header .newTask {
@@ -100,22 +99,34 @@ body {
   height: 24px;
 }
 
-.mainUnit .tasks {
-  max-width: 566px;
-  width: 100%;
-  height: 715px;
-  margin-top: 30px;
-  border: 1px solid #09ff00;
+.mainUnit .tasksMain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.mainUnit .tasks .successes {
+.mainUnit .tasksMain .tasks {
+  max-width: 566px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.mainUnit .tasksMain .tasks .successes {
   max-width: 566px;
   width: 100%;
   height: 211px;
   text-align: -webkit-center;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 10px 25px rgba(29, 52, 54, 0.08);
+          box-shadow: 0px 10px 25px rgba(29, 52, 54, 0.08);
+  border-radius: 10px;
+  margin-bottom: 30px;
 }
 
-.mainUnit .tasks .successes .successestitleHeader {
+.mainUnit .tasksMain .tasks .successes .successestitleHeader {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -125,10 +136,10 @@ body {
   max-width: 529px;
   width: 100%;
   height: 25px;
-  margin-top: 20px;
+  padding-top: 20px;
 }
 
-.mainUnit .tasks .successes .successestitleHeader .successesTitle {
+.mainUnit .tasksMain .tasks .successes .successestitleHeader .successesTitle {
   font-family: Nunito;
   font-style: normal;
   font-weight: 600;
@@ -138,7 +149,7 @@ body {
   margin: 0;
 }
 
-.mainUnit .tasks .successes .successestitleHeader .ellipsis {
+.mainUnit .tasksMain .tasks .successes .successestitleHeader .ellipsis {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -150,7 +161,7 @@ body {
   width: 28px;
 }
 
-.mainUnit .tasks .successes .successestitleHeader .ellipsis .ellipsisSpan {
+.mainUnit .tasksMain .tasks .successes .successestitleHeader .ellipsis .ellipsisSpan {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -163,7 +174,7 @@ body {
   border-radius: 50px;
 }
 
-.mainUnit .tasks .successes .taskBoard {
+.mainUnit .tasksMain .tasks .successes .taskBoard {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -176,7 +187,7 @@ body {
   margin-top: 5px;
 }
 
-.mainUnit .tasks .successes .taskBoard .taskBoard_1 .taskBoardP {
+.mainUnit .tasksMain .tasks .successes .taskBoard .taskBoard_1 .taskBoardP {
   font-family: Nunito;
   font-style: normal;
   font-weight: 600;
@@ -185,7 +196,7 @@ body {
   color: #282846;
 }
 
-.mainUnit .tasks .successes .taskBoard .taskBoard_1 .rangeOfTasks {
+.mainUnit .tasksMain .tasks .successes .taskBoard .taskBoard_1 .rangeOfTasks {
   border: 1px solid #29a19c;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -195,7 +206,7 @@ body {
   height: 100px;
 }
 
-.mainUnit .tasks .successes .taskBoard .taskBoard_1 .rangeOfTasks .meaning {
+.mainUnit .tasksMain .tasks .successes .taskBoard .taskBoard_1 .rangeOfTasks .meaning {
   font-family: Nunito;
   font-style: normal;
   font-weight: 600;
@@ -205,14 +216,18 @@ body {
   margin-top: 12px;
 }
 
-.mainUnit .tasks .activeTasks {
+.mainUnit .tasksMain .tasks .activeTasks {
   max-width: 566px;
   width: 100%;
-  height: 474px;
-  border: 1px solid #20302f;
+  height: 482px;
+  text-align: -webkit-center;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 10px 25px rgba(29, 52, 54, 0.08);
+          box-shadow: 0px 10px 25px rgba(29, 52, 54, 0.08);
+  border-radius: 10px;
 }
 
-.mainUnit .tasks .activeTasks .successestitleHeader {
+.mainUnit .tasksMain .tasks .activeTasks .successestitleHeader {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -222,10 +237,10 @@ body {
   max-width: 529px;
   width: 100%;
   height: 25px;
-  margin-top: 20px;
+  padding-top: 20px;
 }
 
-.mainUnit .tasks .activeTasks .successestitleHeader .successesTitle {
+.mainUnit .tasksMain .tasks .activeTasks .successestitleHeader .successesTitle {
   font-family: Nunito;
   font-style: normal;
   font-weight: 600;
@@ -235,7 +250,7 @@ body {
   margin: 0;
 }
 
-.mainUnit .tasks .activeTasks .successestitleHeader .ellipsis {
+.mainUnit .tasksMain .tasks .activeTasks .successestitleHeader .ellipsis {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -247,7 +262,7 @@ body {
   width: 28px;
 }
 
-.mainUnit .tasks .activeTasks .successestitleHeader .ellipsis .ellipsisSpan {
+.mainUnit .tasksMain .tasks .activeTasks .successestitleHeader .ellipsis .ellipsisSpan {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -258,5 +273,182 @@ body {
   height: 6px;
   background: #282846;
   border-radius: 50px;
+}
+
+.mainUnit .tasksMain .tasks .activeTasks .checkСontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 526px;
+  width: 100%;
+  height: 50px;
+  margin: 10px 0;
+  background: rgba(41, 161, 156, 0.02);
+  border: 1px solid rgba(40, 40, 70, 0.1);
+  border-radius: 10px;
+}
+
+.mainUnit .tasksMain .tasks .activeTasks .checkСontainer .check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 15px;
+}
+
+.mainUnit .tasksMain .tasks .activeTasks .checkСontainer .check .checkbox {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #29a19c;
+}
+
+.mainUnit .tasksMain .tasks .activeTasks .checkСontainer .check .checkP {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  color: #282846;
+  margin-left: 10px;
+}
+
+.mainUnit .tasksMain .tasks .activeTasks .checkСontainer .removal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 46px;
+  width: 100%;
+  margin-right: 15px;
+}
+
+.mainUnit .tasksMain .tasks .activeTasks .checkСontainer .removal .removalImg {
+  width: 18px;
+  height: 18px;
+}
+
+.mainUnit .tasksMain .infoSection {
+  width: 473px;
+  height: 770px;
+  margin-top: 30px;
+}
+
+.mainUnit .tasksMain .infoSection .time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #ffffff;
+  width: 473px;
+  -webkit-box-shadow: 0px 10px 25px rgba(29, 52, 54, 0.08);
+          box-shadow: 0px 10px 25px rgba(29, 52, 54, 0.08);
+  border-radius: 10px;
+  height: 143px;
+}
+
+.mainUnit .tasksMain .infoSection .time .timeP {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  color: #29a19c;
+  width: 425px;
+}
+
+.mainUnit .tasksMain .infoSection .time .timeData {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 425px;
+  height: 58px;
+}
+
+.mainUnit .tasksMain .infoSection .time .timeData .timeDataBlock .timeDataP {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 0;
+  color: #282846;
+}
+
+.mainUnit .tasksMain .infoSection .time .timeData .timeDataBlock .timeClock {
+  width: 24px;
+  height: 24px;
+}
+
+.mainUnit .tasksMain .infoSection .time .timeData .timeDataBlock .timeSpan {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 34px;
+  color: #282846;
+}
+
+.mainUnit .tasksMain .infoSection .containerObservation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 30px;
+  background: #ffffff;
+  width: 473px;
+  -webkit-box-shadow: 0px 10px 25px rgba(29, 52, 54, 0.08);
+          box-shadow: 0px 10px 25px rgba(29, 52, 54, 0.08);
+  border-radius: 10px;
+  width: 472px;
+  height: 133px;
+}
+
+.mainUnit .tasksMain .infoSection .containerObservation .observation {
+  width: 432px;
+}
+
+.mainUnit .tasksMain .infoSection .containerObservation .observation .observationP {
+  width: 432px;
+  height: 25px;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  color: #29a19c;
+}
+
+.mainUnit .tasksMain .infoSection .containerObservation .observation .observationText .observationTextP {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  color: #282846;
+}
+
+.mainUnit .tasksMain .infoSection .addition {
+  width: 472px;
+  height: 256px;
 }
 /*# sourceMappingURL=mainPage.css.map */
