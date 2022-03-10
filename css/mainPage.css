@@ -4,6 +4,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .mainUnit {
@@ -393,6 +396,7 @@ body {
 }
 
 .mainUnit .tasksMain .infoSection .time .timeData .timeDataBlock .timeClock {
+  vertical-align: sub;
   width: 24px;
   height: 24px;
 }
