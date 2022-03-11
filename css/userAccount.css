@@ -1,0 +1,131 @@
+.tasksMain .tasks .tasksUser {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 540px;
+  height: 408px;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 10px 25px rgba(29, 52, 54, 0.08);
+          box-shadow: 0px 10px 25px rgba(29, 52, 54, 0.08);
+  border-radius: 10px;
+}
+
+.tasksMain .tasks .tasksUser .tasksUserOne {
+  width: 150px;
+  height: 177px;
+  text-align: center;
+}
+
+.tasksMain .tasks .tasksUser .tasksUserOne .tasksUserPhoto {
+  width: 150px;
+  height: 150px;
+  left: 0px;
+  top: 0px;
+  background: url(.png);
+  border: 1px solid #f0f0f0;
+  border-radius: 77px;
+}
+
+.tasksMain .tasks .tasksUser .tasksUserOne .tasksUserInput {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #29a19c;
+}
+
+.tasksMain .tasks .tasksUser .tasksUserTwo {
+  width: 300px;
+  height: 368px;
+}
+
+.tasksMain .tasks .tasksUser .tasksUserTwo .UserForm .UserFormContainer {
+  margin-top: 30px;
+}
+
+.tasksMain .tasks .tasksUser .tasksUserTwo .UserForm .UserFormContainer .UserCheckbox {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #11698e;
+  border-radius: 4px;
+  vertical-align: sub;
+  margin-top: 10px;
+}
+
+.tasksMain .tasks .tasksUser .tasksUserTwo .UserForm .UserFormContainer .img_network {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+}
+
+.tasksMain .tasks .tasksUser .tasksUserTwo .UserForm .UserFormContainer .imgNet {
+  margin-left: 20px;
+}
+
+.tasksMain .tasks .tasksUser .tasksUserTwo .UserForm .UserFormP {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+}
+
+.tasksMain .tasks .tasksUser .tasksUserTwo .UserForm .UserFormInput {
+  width: 300px;
+  height: 44px;
+  background: #fafafa;
+  opacity: 0.2;
+  border: 1px solid #282846;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 6px;
+}
+
+.tasksMain .tasks .tasksUser .tasksUserTwo .UserForm .UserFormSubmit {
+  width: 223px;
+  height: 42px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #fafafa;
+  background: #29a19c;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+.subscription {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 473px;
+  height: 42px;
+  background: #ecca75;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.subscription .subscriptionP {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.01em;
+  color: #fafafa;
+}
+/*# sourceMappingURL=userAccount.css.map */

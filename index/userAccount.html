@@ -13,6 +13,7 @@
         rel="stylesheet">
     <link href="../css/mainPage.css" rel="stylesheet">
     <link href="../css/book.css" rel="stylesheet">
+    <link href="../css/userAccount.css" rel="stylesheet">
 </head>
 
 <body>
@@ -115,137 +116,44 @@
         </header>
         <div class="tasksMain">
             <div class="tasks">
-                <div class="successes">
-                    <div class="successestitleHeader">
-                        <p class="successesTitle">Успехи за неделю</p>
-                        <div class="ellipsis">
-                            <p class="ellipsisSpan"></p>
-                            <p class="ellipsisSpan"></p>
-                            <p class="ellipsisSpan"></p>
-                        </div>
-                    </div>
+                <div class="tasksUser">
+                    <div class="tasksUserOne">
+                        <img src="../images/header__avatar.png" class="tasksUserPhoto" alt="UserPhoto">
+                        <a src="#" class="tasksUserInput">изменить фото</a>
 
-                    <div class="taskBoard">
-                        <div class="taskBoard_1">
-                            <p class="taskBoardP">Создано</p>
-                            <div class="rangeOfTasks">
-                                <div class="meaning"></div> <span class="meaning">113</span>
-                                <p class="taskBoardP">задач</p>
+                    </div>
+                    <div class="tasksUserTwo">
+
+                        <form class="UserForm">
+                            <div class="">
+                                <p class="UserFormP">Ваш никнейм:</p>
+                                <input type="text" class="UserFormInput" value="" placeholder="username">
+                            </div>
+                            <div class="UserFormContainer">
+                                <p class="UserFormP">Ваша почта:</p>
+                                <input type="email" class="UserFormInput" placeholder="username@email.com">
+                                <input type="checkbox" name="scales" class="UserCheckbox">
+                                <label for="scales">Подписаться на рассылку</label>
                             </div>
 
-                        </div>
-
-                        <div class="taskBoard_1">
-                            <p class="taskBoardP">Завершено</p>
-                            <div class="rangeOfTasks">
-                                <div class="meaning"></div> <span class="meaning">113</span>
-                                <p class="taskBoardP">задач</p>
+                            <div class="UserFormContainer">
+                                <p class="UserFormP">Ваши социальные сети:</p>
+                                <a src="" class=""><img src="../images/facebook 1.svg" class="img_network"
+                                        alt="Group"></a>
+                                <a src="" class=""><img src="../images/Group.svg" class="img_network imgNet "
+                                        alt="facebook"></a>
                             </div>
-
-                        </div>
-
-                        <div class="taskBoard_1">
-                            <p class="taskBoardP">Удалено</p>
-                            <div class="rangeOfTasks">
-                                <div class="meaning"></div> <span class="meaning">113</span>
-                                <p class="taskBoardP">задач</p>
-                            </div>
-
-                        </div>
+                            <button type="submit" class="UserFormSubmit">Сохранить изменения</button>
+                        </form>
                     </div>
-                </div>
-
-                <div class="activeTasks">
-                    <div class="successestitleHeader">
-                        <p class="successesTitle">Активные задачи</p>
-                        <div class="ellipsis">
-                            <p class="ellipsisSpan"></p>
-                            <p class="ellipsisSpan"></p>
-                            <p class="ellipsisSpan"></p>
-                        </div>
-                    </div>
-                    <div class="checkСontainer">
-                        <div class="check">
-                            <input class="checkbox" type="checkbox">
-                            <p class="checkP">Приготовить вкусный ужин</p>
-                        </div>
-
-                        <div class="removal">
-                            <img src="../images/edit.svg" class="removalImg" alt="edit">
-                            <img src="../images/trash.svg" class="removalImg" alt="trash">
-                        </div>
-                    </div>
-
-                    <div class="checkСontainer">
-                        <div class="check">
-                            <input class="checkbox" type="checkbox">
-                            <p class="checkP">Приготовить вкусный ужин</p>
-                        </div>
-
-                        <div class="removal">
-                            <img src="../images/edit.svg" class="removalImg" alt="edit">
-                            <img src="../images/trash.svg" class="removalImg" alt="trash">
-                        </div>
-                    </div>
-
-                    <div class="checkСontainer">
-                        <div class="check">
-                            <input class="checkbox" type="checkbox">
-                            <p class="checkP">Приготовить вкусный ужин</p>
-                        </div>
-
-                        <div class="removal">
-                            <img src="../images/edit.svg" class="removalImg" alt="edit">
-                            <img src="../images/trash.svg" class="removalImg" alt="trash">
-                        </div>
-                    </div>
-
-                    <div class="checkСontainer">
-                        <div class="check">
-                            <input class="checkbox" type="checkbox">
-                            <p class="checkP">Приготовить вкусный ужин</p>
-                        </div>
-
-                        <div class="removal">
-                            <img src="../images/edit.svg" class="removalImg" alt="edit">
-                            <img src="../images/trash.svg" class="removalImg" alt="trash">
-                        </div>
-                    </div>
-
-                    <div class="successestitleHeader">
-                        <p class="successesTitle">Завершенные задачи</p>
-
-                    </div>
-
-                    <div class="checkСontainer">
-                        <div class="check">
-                            <input class="checkbox" type="checkbox">
-                            <p class="checkP">Приготовить вкусный ужин</p>
-                        </div>
-
-                        <div class="removal">
-                            <img src="../images/edit.svg" class="removalImg" alt="edit">
-                            <img src="../images/trash.svg" class="removalImg" alt="trash">
-                        </div>
-                    </div>
-
-                    <div class="checkСontainer">
-                        <div class="check">
-                            <input class="checkbox" type="checkbox">
-                            <p class="checkP">Приготовить вкусный ужин</p>
-                        </div>
-
-                        <div class="removal">
-                            <img src="../images/edit.svg" class="removalImg" alt="edit">
-                            <img src="../images/trash.svg" class="removalImg" alt="trash">
-                        </div>
-                    </div>
-
                 </div>
 
 
             </div>
             <section class="infoSection">
+                <div class="subscription">
+                    <p class="subscriptionP">Оформить премиум подписку</p>
+                </div>
                 <div class="time">
                     <p class="timeP">Такс такс такс</p>
                     <div class="timeData">
@@ -277,7 +185,8 @@
                     <div class="observation">
                         <p class="observationP">Факт дня</p>
                         <div class="observationText">
-                            <p class="observationTextP">Человек, который просыпается в 6 утра, по статистике, закрывает
+                            <p class="observationTextP">Человек, который просыпается в 6 утра, по статистике,
+                                закрывает
                                 все задачи к 18:00 вечера.<br>
                                 Попробуем также 🤔?</p>
 
@@ -286,13 +195,6 @@
                     </div>
                 </div>
 
-                <div class="containerObservation addition">
-                    <div class="observation">
-                        <p class="observationP">График успеваемости</p>
-
-
-                    </div>
-                </div>
 
             </section>
         </div>
