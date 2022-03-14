@@ -88,6 +88,46 @@
   border-radius: 6px;
 }
 
+.tasksMain .tasks .tasksUser .tasksUserTwo .UserForm ::-webkit-input-placeholder {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+  padding-left: 15px;
+}
+
+.tasksMain .tasks .tasksUser .tasksUserTwo .UserForm :-ms-input-placeholder {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+  padding-left: 15px;
+}
+
+.tasksMain .tasks .tasksUser .tasksUserTwo .UserForm ::-ms-input-placeholder {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+  padding-left: 15px;
+}
+
+.tasksMain .tasks .tasksUser .tasksUserTwo .UserForm ::placeholder {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+  padding-left: 15px;
+}
+
 .tasksMain .tasks .tasksUser .tasksUserTwo .UserForm .UserFormSubmit {
   width: 223px;
   height: 42px;

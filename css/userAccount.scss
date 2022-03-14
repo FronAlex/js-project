@@ -65,6 +65,7 @@
                         line-height: 19px;
                         color: #000000;
                     }
+
                     .UserFormInput {
                         width: 300px;
                         height: 44px;
@@ -73,6 +74,15 @@
                         border: 1px solid #282846;
                         box-sizing: border-box;
                         border-radius: 6px;
+                    }
+                    ::placeholder {
+                        font-family: "Nunito";
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 19px;
+                        color: #000000;
+                        padding-left: 15px;
                     }
                     .UserFormSubmit {
                         width: 223px;

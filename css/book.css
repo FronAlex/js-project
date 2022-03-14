@@ -3,6 +3,7 @@
     height: 900px;
     background: #ffffff;
     filter: drop-shadow(0px 10px 25px rgba(29, 52, 54, 0.08));
+    transition: 2s linear;
 }
 .menuNext {
     width: 211px;
@@ -52,7 +53,7 @@
     display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between;
+    /*  justify-content: space-between; */
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -168,4 +169,42 @@
     height: 18px;
     vertical-align: sub;
     margin-right: 10px;
+}
+
+.exid .exid_menu:hover {
+    font-size: 20px;
+    transition: 0.5s linear;
+    cursor: pointer;
+}
+.data .data1:hover {
+    font-size: 20px;
+    transition: 0.5s linear;
+    cursor: pointer;
+}
+.categories .subcategory:hover {
+    font-size: 20px;
+    transition: 0.5s linear;
+    cursor: pointer;
+}
+.categories .addition:hover {
+    font-size: 20px;
+    transition: 0.5s linear;
+    cursor: pointer;
+}
+
+.nextAdd {
+    background-color: #2c3440 !important;
+    transition: 2s linear;
+}
+.bodyClass {
+    background-color: #222831 !important;
+    transition: 1s linear;
+}
+.addP {
+    color: #f9f9f9 !important;
+    transition: 1s linear;
+}
+.addPEl {
+    background-color: #f9f9f9 !important;
+    transition: 1s linear;
 }

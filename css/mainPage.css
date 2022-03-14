@@ -7,6 +7,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: 2s linear;
+  transition: 2s linear;
 }
 
 .mainUnit {
@@ -30,6 +32,8 @@ body {
   max-width: 1068px;
   width: 100%;
   height: 44px;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
 }
 
 .mainUnit header .newTask {
@@ -127,6 +131,8 @@ body {
           box-shadow: 0px 10px 25px rgba(29, 52, 54, 0.08);
   border-radius: 10px;
   margin-bottom: 30px;
+  -webkit-transition: 2s linear;
+  transition: 2s linear;
 }
 
 .mainUnit .tasksMain .tasks .successes .successestitleHeader {
@@ -173,7 +179,7 @@ body {
           justify-content: space-between;
   width: 6px;
   height: 6px;
-  background: #282846;
+  background-color: #282846;
   border-radius: 50px;
 }
 
@@ -207,6 +213,8 @@ body {
   background: #ffffff;
   width: 100px;
   height: 100px;
+  -webkit-transition: 2s linear;
+  transition: 2s linear;
 }
 
 .mainUnit .tasksMain .tasks .successes .taskBoard .taskBoard_1 .rangeOfTasks .meaning {
@@ -223,6 +231,8 @@ body {
   max-width: 566px;
   width: 100%;
   height: 482px;
+  -webkit-transition: 2s linear;
+  transition: 2s linear;
   text-align: -webkit-center;
   background: #ffffff;
   -webkit-box-shadow: 0px 10px 25px rgba(29, 52, 54, 0.08);
@@ -274,7 +284,7 @@ body {
           justify-content: space-between;
   width: 6px;
   height: 6px;
-  background: #282846;
+  background-color: #282846;
   border-radius: 50px;
 }
 
@@ -350,6 +360,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transition: 2s linear;
+  transition: 2s linear;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -425,6 +437,8 @@ body {
   border-radius: 10px;
   width: 472px;
   height: 133px;
+  -webkit-transition: 2s linear;
+  transition: 2s linear;
 }
 
 .mainUnit .tasksMain .infoSection .containerObservation .observation {
