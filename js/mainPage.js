@@ -13,7 +13,8 @@ let modalStyle = document.querySelector('.modalStyle');
 let output = document.querySelector('#output');
 let exid = document.querySelector('.exid');
 let addOutput = document.querySelectorAll('.addOutput');
-
+let mark = document.querySelectorAll('.mark');
+let illumination = document.querySelectorAll('.illumination');
 
 
 const darkTheme = () => {
@@ -66,7 +67,7 @@ const newTaskButton = () => {
     modal.style.opacity = 1;
     modalStyle.style.display = 'block';
     if (dark.dataset.pic !== 'num') {
-        modalStyle.style.backgroundColor = 'rgb(189 236 151)';
+        modalStyle.style.backgroundColor = 'rgb(116 181 184)';
     } else {
         modalStyle.style.backgroundColor = '#2b3267';
     }
@@ -95,3 +96,21 @@ const exidMause = () => {
 
 output.addEventListener('mouseover', exidMenu);
 exid.addEventListener('mouseleave', exidMause);
+
+
+
+
+const markIllumination = (e) => {
+
+    for (let i of illumination) {
+        i.style.display = 'none';
+    };
+
+    e.target.parentElement.children[2].style.display = 'block';
+}
+
+
+for (let i of mark) {
+    i.addEventListener('click', markIllumination);
+};
+

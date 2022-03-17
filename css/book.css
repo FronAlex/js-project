@@ -36,7 +36,7 @@
     width: 212px;
     height: 283px;
     margin-top: 60px;
-    width: fit-content;
+    /* width: fit-content; */
 }
 
 .menu .categories .h1 {
@@ -66,6 +66,7 @@
     line-height: 22px;
     margin-bottom: 30px;
     color: #282846;
+    position: relative;
 }
 
 .menu .categories .subcategory .ico {
@@ -81,6 +82,8 @@
     height: 18px;
     background: #29a19c;
     border-radius: 10px 0px 0px 10px;
+    left: 86%;
+    position: absolute;
 }
 
 .menu .categories .addition {
