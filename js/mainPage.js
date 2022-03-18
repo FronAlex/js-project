@@ -15,6 +15,13 @@ let exid = document.querySelector('.exid');
 let addOutput = document.querySelectorAll('.addOutput');
 let mark = document.querySelectorAll('.mark');
 let illumination = document.querySelectorAll('.illumination');
+let checkСontainer = document.querySelector('#checkСontainer');
+let checkСontainer1 = document.querySelector('#checkСontainer1');
+let addModalTaskInput = document.querySelector('#addModalTaskInput');
+let Add = document.querySelector('.Add');////////
+//
+let activeTasks = document.querySelector('.activeTasks');
+
 
 
 const darkTheme = () => {
@@ -64,8 +71,9 @@ dark.addEventListener('click', darkTheme);
 
 
 const newTaskButton = () => {
-    modal.style.opacity = 1;
-    modalStyle.style.display = 'block';
+    modal.style.display = 'flex';
+    modalStyle.style.width = '100%';
+
     if (dark.dataset.pic !== 'num') {
         modalStyle.style.backgroundColor = 'rgb(116 181 184)';
     } else {
@@ -74,8 +82,9 @@ const newTaskButton = () => {
 }
 
 const TaskCancel = () => {
-    modal.style.opacity = 0;
-    modalStyle.style.display = 'none';
+    modal.style.display = 'none';
+    modalStyle.style.width = '0';
+
 
 }
 
@@ -113,4 +122,73 @@ const markIllumination = (e) => {
 for (let i of mark) {
     i.addEventListener('click', markIllumination);
 };
+
+
+const addingTask = () => {
+
+    console.log(addModalTaskInput.value);
+    let value = addModalTaskInput.value.trim();
+
+    if (value !== '') {
+
+        checkСontainer.innerHTML += (`<div class="checkСontainer">
+    <div class="check">
+        <input class="checkbox removeNone" type="checkbox">
+        <p class="checkP pAdd">${value}</p>
+    </div>
+
+    <div class="removal">
+        <img src="../images/edit.svg" class="removalImg imgMoon removeNone" alt="edit">
+        <img src="../images/trash.svg" class="removalImg removeNone" alt="trash">
+    </div>
+</div>`);
+
+    }
+    /*  checkСontainer.addEventListener('mouseover', addingTaskMouse);
+     checkСontainer.addEventListener('mouseleave', mouseleave); */
+
+    addModalTaskInput.value = '';
+    TaskCancel();
+};
+
+Add.addEventListener('click', addingTask);
+
+
+
+
+const addingTaskMouse = (e) => {
+    let removeNone = document.querySelectorAll('.removeNone');
+
+    for (let i of removeNone) {
+        i.style.display = 'none';
+    }
+
+
+
+    if (e.target.classList == 'checkСontainer') {
+
+
+        e.target.children[0].children[0].style.display = 'block';
+        e.target.children[1].children[0].style.display = 'block';
+        e.target.children[1].children[1].style.display = 'block';
+        e.target.style.backgroundColor = '#33f0df54';
+    }
+    else {
+
+
+
+        let listСontainer = document.querySelectorAll('.checkСontainer');
+
+        for (let i of listСontainer) {
+            i.style.backgroundColor = 'rgba(41, 161, 156, 0.02)';
+        }
+
+    }
+
+
+}
+
+activeTasks.addEventListener('mouseover', addingTaskMouse);
+
+
 

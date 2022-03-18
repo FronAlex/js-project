@@ -118,9 +118,9 @@ body {
     .tasksMain {
         display: flex;
         justify-content: space-between;
-        position: relative;
+
         .modal {
-            display: flex;
+            display: none;
             flex-direction: column;
             align-items: center;
             position: absolute;
@@ -136,7 +136,7 @@ body {
             border-radius: 10px;
             margin-bottom: 30px;
             transition: 2s linear;
-            opacity: 0;
+
             .modalTask {
                 display: flex;
                 width: 660px;
@@ -371,11 +371,14 @@ body {
                 background: rgba(41, 161, 156, 0.02);
                 border: 1px solid rgba(40, 40, 70, 0.1);
                 border-radius: 10px;
+                cursor: pointer;
                 .check {
                     display: flex;
                     align-items: center;
                     margin-left: 15px;
+
                     .checkbox {
+                        display: none;
                         width: 20px;
                         height: 20px;
                         border: 1px solid #29a19c;
@@ -399,6 +402,7 @@ body {
                     margin-right: 15px;
 
                     .removalImg {
+                        display: none;
                         width: 18px;
                         height: 18px;
                     }
@@ -496,11 +500,16 @@ body {
 }
 
 .modalStyle {
-    display: none;
     position: absolute;
-    width: 99%;
+    width: 0;
     height: 99%;
     z-index: 2;
     opacity: 0.8;
-    transition: 2s linear;
+    transition: 0.8s linear;
+}
+#checkСontainer {
+    min-height: 200px;
+}
+.removNone {
+    display: block;
 }
