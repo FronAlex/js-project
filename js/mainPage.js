@@ -1,73 +1,32 @@
-let dark = document.querySelector('#dark');
-let body = document.querySelector('body');
-let addClass = document.querySelectorAll('.addClass');
-let addP = document.querySelectorAll('.pAdd');
-let eleps = document.querySelectorAll('.pAddEleps');
-let imgMoon = document.querySelectorAll('.imgMoon');
-let bodyColor = document.querySelector('body');
-let modal = document.querySelector('.modal');
+
 let newTask = document.querySelector('.newTask');
 let newTaskCancel = document.querySelector('.Cancel');
+let mark = document.getElementsByClassName('mark');
+let illumination = document.getElementsByClassName('illumination');
+let modal = document.querySelector('.modal');
 let modalStyle = document.querySelector('.modalStyle');
-
-let output = document.querySelector('#output');
-let exid = document.querySelector('.exid');
-let addOutput = document.querySelectorAll('.addOutput');
-let mark = document.querySelectorAll('.mark');
-let illumination = document.querySelectorAll('.illumination');
 let checkСontainer = document.querySelector('#checkСontainer');
 let checkСontainer1 = document.querySelector('#checkСontainer1');
 let addModalTaskInput = document.querySelector('#addModalTaskInput');
-let Add = document.querySelector('.Add');////////
-//
+let Add = document.querySelector('.Add');
 let activeTasks = document.querySelector('.activeTasks');
 
 
+const markIllumination = (e) => {
 
-const darkTheme = () => {
-    if (dark.dataset.pic !== 'num') {
-        dark.setAttribute('data-pic', 'num');
+    for (let i of illumination) {
+        i.style.display = 'none';
+    };
 
-        for (let i of imgMoon) {
-            let y = i.src.replace('svg', 'png');
-            i.setAttribute('src', y);
-        }
-
-        for (let i of eleps) {
-            i.classList.toggle('addPEl');
-        }
-        for (let i of addP) {
-            i.classList.toggle('addP');
-        }
-        for (let i of addClass) {
-            i.classList.toggle('nextAdd');
-        }
-        body.classList.toggle('bodyClass');
-        modal.classList.toggle('modalNextClass');
-    } else {
-        console.log('!!!!!!!!!!');
-        dark.removeAttribute('data-pic', 'num');
-        for (let i of imgMoon) {
-            let y = i.src.replace('png', 'svg');
-            i.setAttribute('src', y)
-        }
-
-        console.log(dark.dataset.pic);
-        for (let i of eleps) {
-            i.classList.toggle('addPEl');
-        }
-        for (let i of addP) {
-            i.classList.toggle('addP');
-        }
-        for (let i of addClass) {
-            i.classList.toggle('nextAdd');
-        }
-        body.classList.toggle('bodyClass');
-        modal.classList.toggle('modalNextClass');
-    }
+    e.target.parentElement.children[2].style.display = 'block';
 }
 
-dark.addEventListener('click', darkTheme);
+const markIlluminationFunction = () => {
+    for (let i of mark) {
+        i.addEventListener('click', markIllumination);
+    };
+}
+markIlluminationFunction();
 
 
 const newTaskButton = () => {
@@ -91,42 +50,10 @@ const TaskCancel = () => {
 newTask.addEventListener('click', newTaskButton);
 newTaskCancel.addEventListener('click', TaskCancel);
 
-const exidMenu = () => {
-    for (let i of addOutput) {
-        i.style.marginLeft = '0 ';
-    }
-}
-
-const exidMause = () => {
-    for (let i of addOutput) {
-        i.style.marginLeft = '-600px';
-    }
-}
-
-output.addEventListener('mouseover', exidMenu);
-exid.addEventListener('mouseleave', exidMause);
-
-
-
-
-const markIllumination = (e) => {
-
-    for (let i of illumination) {
-        i.style.display = 'none';
-    };
-
-    e.target.parentElement.children[2].style.display = 'block';
-}
-
-
-for (let i of mark) {
-    i.addEventListener('click', markIllumination);
-};
-
 
 const addingTask = () => {
 
-    console.log(addModalTaskInput.value);
+
     let value = addModalTaskInput.value.trim();
 
     if (value !== '') {
@@ -144,16 +71,13 @@ const addingTask = () => {
 </div>`);
 
     }
-    /*  checkСontainer.addEventListener('mouseover', addingTaskMouse);
-     checkСontainer.addEventListener('mouseleave', mouseleave); */
+
 
     addModalTaskInput.value = '';
     TaskCancel();
 };
 
 Add.addEventListener('click', addingTask);
-
-
 
 
 const addingTaskMouse = (e) => {
@@ -180,7 +104,7 @@ const addingTaskMouse = (e) => {
         let listСontainer = document.querySelectorAll('.checkСontainer');
 
         for (let i of listСontainer) {
-            i.style.backgroundColor = 'rgba(41, 161, 156, 0.02)';
+            i.style.backgroundColor = 'rgba(155 233 230 / 85%)';
         }
 
     }
@@ -189,6 +113,139 @@ const addingTaskMouse = (e) => {
 }
 
 activeTasks.addEventListener('mouseover', addingTaskMouse);
+
+
+var subcategoryRemove = document.getElementsByClassName('subcategoryRemove');
+var addModalTaskSelect = document.querySelector('.addModalTaskSelect');
+
+
+
+
+
+const removeCategory = (e) => {
+
+    let inputCategoryDel = document.querySelector('.inputCategoryDel');
+    inputCategoryDel.style.display = 'block';
+    inputCategoryDel.focus();
+
+    inputCategoryDel.addEventListener('keyup', function (e) {
+
+
+        if (e.key === "Enter") {
+            var del = inputCategoryDel.value
+            let inputDel = inputCategoryDiv.children
+
+            for (var i of inputDel) {
+
+
+
+                if (i.childNodes[3].innerText == del) {
+
+                    i.remove();
+                    inputCategoryDel.style.display = 'none';
+                } else {
+                    console.log('!!!!!')
+                }
+
+            }
+            for (let index of addModalTaskSelect.children) {
+                if (index.innerHTML == del) {
+                    index.remove();
+                }
+
+            }
+            if (inputCategoryDel.value.trim() == '') {
+                inputCategoryDel.value = '';
+                inputCategoryDel.style.display = 'none';
+            }
+
+        }
+    });
+
+
+
+
+    inputCategoryDel.addEventListener("blur", function (event) {
+        event.target.style.display = 'none';
+        event.target.value = '';
+    }, true);
+
+}
+
+
+
+
+var inputCategoryDiv = document.querySelector('.inputCategoryDiv');
+var addTasks = document.querySelector('.addTasks');
+
+
+const addCategory = () => {
+    var inputCategory = document.querySelector('.inputCategory');
+    inputCategory.style.display = 'block';
+    inputCategory.focus();
+
+
+    inputCategory.addEventListener('keyup', function (e) {
+
+
+        if (e.key === "Enter") {
+
+
+            if (inputCategory.value.trim() !== '') {
+
+
+                if (dark.dataset.pic == 'num') {
+                    inputCategoryDiv.innerHTML += `
+                    <div class="subcategory subcategoryRemove pAdd addP">
+                <p>NEW:</p>
+                <div class="pAdd mark mark1">${inputCategory.value} </div>
+                <p class="illumination"></p>
+               
+                </div>
+                `
+
+                } else {
+                    inputCategoryDiv.innerHTML += `
+                    <div class="subcategory subcategoryRemove pAdd">
+                <p>NEW:</p>
+                <div class="pAdd mark mark1">${inputCategory.value} </div>
+                <p class="illumination"></p>
+               
+                </div>
+                `
+                }
+
+                markIlluminationFunction();
+
+
+                for (let index of subcategoryRemove) {
+                    index.addEventListener('dblclick', removeCategory);
+
+                }
+
+
+                addModalTaskSelect.innerHTML += `
+                <option value="4">${inputCategory.value}</option> `
+
+                inputCategory.value = '';
+                inputCategory.style.display = 'none';
+
+            } else if (inputCategory.value.trim() == '') {
+                inputCategory.value = '';
+                inputCategory.style.display = 'none';
+            }
+        }
+    });
+
+    inputCategory.addEventListener("blur", function (event) {
+        event.target.style.display = 'none';
+        event.target.value = '';
+    }, true);
+
+
+}
+
+addTasks.addEventListener('click', addCategory);
 
 
 

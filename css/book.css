@@ -1,13 +1,13 @@
 .menu {
     width: 231px;
-    height: 900px;
+    min-height: 900px;
     background: #ffffff;
     filter: drop-shadow(0px 10px 25px rgba(29, 52, 54, 0.08));
     transition: 2s linear;
 }
 .menuNext {
     width: 211px;
-    height: 900px;
+    min-height: 900px;
     margin-left: 20px;
 }
 
@@ -34,9 +34,14 @@
 
 .menu .categories {
     width: 212px;
-    height: 283px;
+    min-height: 283px;
     margin-top: 60px;
-    /* width: fit-content; */
+}
+
+.menu .categories .inputCategory {
+    display: none;
+    margin-bottom: 20px;
+    width: 120px;
 }
 
 .menu .categories .h1 {
@@ -48,7 +53,7 @@
     color: #29a19c;
 }
 
-.menu .categories .subcategory {
+.subcategory {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -69,14 +74,14 @@
     position: relative;
 }
 
-.menu .categories .subcategory .ico {
+.subcategory .ico {
     width: 18px;
     height: 18px;
     vertical-align: sub;
     margin-right: 10px;
 }
 
-.menu .categories .subcategory .illumination {
+.subcategory .illumination {
     display: none;
     width: 30px;
     height: 18px;
@@ -217,4 +222,38 @@
 .addPEl {
     background-color: #f9f9f9 !important;
     transition: 1s linear;
+}
+.mark1 {
+    margin-left: 10px;
+}
+
+.butRemove {
+    width: 10px;
+    height: 15px;
+    background-color: aqua;
+    margin-left: 10px;
+}
+.inputCategoryDel {
+    display: none;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    background-color: #ff0000bd;
+    color: rgb(4, 4, 41);
+}
+
+.inputCategoryDel::placeholder {
+    text-align: center;
+    color: rgb(4, 4, 41);
+}
+#exidHover {
+    text-decoration: none;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #282846;
+}
+.imgMoonDay {
+    cursor: pointer;
 }

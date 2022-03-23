@@ -77,28 +77,28 @@
 
             <div class="exid">
 
-                <div class="exid_menu">
+                <div class="exid_menu addOutput">
                     <img class="ico3 imgMoon" src="../images/user.svg" alt="user">
                     <div class="exidHover pAdd">Личный кабинет</div>
                 </div>
 
-                <div class="exid_menu">
+                <div class="exid_menu addOutput">
                     <img class="ico3 imgMoon" src="../images/moon.svg" alt="moon">
-                    <div class="exidHover pAdd" id="dark">Темный режим</div>
+                    <div class="exidHover pAdd dark">Темный режим</div>
                 </div>
 
-                <div class="exid_menu">
+                <div class="exid_menu addOutput">
                     <img class="ico3 imgMoon" src="../images/settings.svg" alt="settings">
                     <div class="exidHover pAdd">Настройки</div>
                 </div>
 
-                <div class="exid_menu star">
+                <div class="exid_menu star addOutput">
                     <img class="ico3" src="../images/star.svg" alt="star">
                     <div class="exidHover">Премиум</div>
                 </div>
 
 
-                <div class="exid_menu">
+                <div class="exid_menu" id="output">
                     <img class="ico3 imgMoon" src="../images/log-in.svg" alt="log-in">
                     <div class="exidHover pAdd">Выйти</div>
                 </div>
@@ -106,21 +106,60 @@
         </div>
     </section>
     <section class="mainUnit">
-        <header class="addClass">
-            <div class="newTask">
-                <img class="cross" src="../images/Group 1.svg" alt="Group 1">
+        <header class=" addClass">
+            <div class="newTask ">
+                <img class="cross " src="../images/Group 1.svg" alt="Group 1">
                 <p class="crossP">Новая задача</p>
             </div>
-            <img class="Times_of_Day imgMoon" src="../images/moon.svg" alt="moon">
+            <img class="Times_of_Day imgMoon imgMoonDay" src="../images/moon.svg" alt="moon">
             <div class="user">
                 <p class="userName pAdd">Хорошего дня, username</p>
                 <img class="userImg" src="../images/header__avatar.svg" alt="userImg">
 
-                <img class="JackdawImg imgMoon" src="../images/header__user-menu.svg" alt="userMenu">
+                <img class="JackdawImg  imgMoon" src="../images/header__user-menu.svg" alt="userMenu">
             </div>
         </header>
+
+        <div class="modal addClass ">
+            <div class="modalTask">
+                <h1 class="modalH1">Добавить новую задачу</h1>
+                <select class="modalSelect" name="pac">
+                    <option value="1" name="pac">Выбрать шаблон</option>
+                </select>
+            </div>
+            <div class="addModalTask">
+                <h2 class="addModalTaskH2 pAdd">Что нужно сделать?</h2>
+                <input type="text" placeholder="Приготовить ужин" id="addModalTaskInput" class="addModalTaskInput">
+            </div>
+
+            <div class="addModalTask addModalTaskDisplay">
+                <div class="addModalTaskСategory">
+                    <h2 class="addModalTaskH2 pAdd">Категория</h2>
+                    <select class="addModalTaskInput">
+                        <option value="1">Выбрать</option>
+                    </select>
+                </div>
+                <div class="addModalTaskСategory">
+                    <h2 class="addModalTaskH2 pAdd">Когда?</h2>
+                    <input type="date" class="addModalTaskInput"> </input>
+                </div>
+                <div class="addModalTaskСategory">
+                    <h2 class="addModalTaskH2 pAdd">Приоритет задачи</h2>
+                    <select class="addModalTaskInput">
+                        <option value="1">Выбрать</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="addModalTaskButton">
+                <button class="Cancel">Отменить</button>
+                <button class="Save">Сохранить как шаблон</button>
+                <button class="Add">Добавить</button>
+            </div>
+        </div>
+
         <div class="tasksMain">
-            <div class="tasks">
+            <div class="tasks" id="idTasks">
                 <div class="tasksUser addClass">
                     <div class="tasksUserOne">
                         <img src="../images/header__avatar.png" class="tasksUserPhoto" alt="UserPhoto">
@@ -205,9 +244,10 @@
         </div>
 
     </section>
+    <div class="modalStyle"></div>
 
     <script src="../js/timeData.js"></script>
-    <script src="../js/mainPage.js"></script>
+    <script src="../js/addMainPage.js"></script>
     <script src="../js/userAccount.js"></script>
 </body>
 

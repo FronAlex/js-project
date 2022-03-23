@@ -116,7 +116,7 @@ body {
           justify-content: space-between;
 }
 
-.mainUnit .tasksMain .modal {
+.mainUnit .modal {
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -142,7 +142,7 @@ body {
   transition: 2s linear;
 }
 
-.mainUnit .tasksMain .modal .modalTask {
+.mainUnit .modal .modalTask {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -151,7 +151,7 @@ body {
   margin: 20px 0px 30px 0px;
 }
 
-.mainUnit .tasksMain .modal .modalTask .modalH1 {
+.mainUnit .modal .modalTask .modalH1 {
   font-family: "Nunito";
   font-style: normal;
   font-weight: 700;
@@ -162,7 +162,7 @@ body {
   margin: 0;
 }
 
-.mainUnit .tasksMain .modal .modalTask .modalSelect {
+.mainUnit .modal .modalTask .modalSelect {
   width: 151px;
   height: 28px;
   border: 1px solid rgba(40, 40, 70, 0.2);
@@ -179,13 +179,13 @@ body {
   opacity: 0.5;
 }
 
-.mainUnit .tasksMain .modal .addModalTask {
+.mainUnit .modal .addModalTask {
   width: 660px;
   height: 66px;
   margin-bottom: 30px;
 }
 
-.mainUnit .tasksMain .modal .addModalTask .addModalTaskH2 {
+.mainUnit .modal .addModalTask .addModalTaskH2 {
   font-family: "Nunito";
   font-style: normal;
   font-weight: 700;
@@ -194,7 +194,7 @@ body {
   color: #282846;
 }
 
-.mainUnit .tasksMain .modal .addModalTask .addModalTaskInput {
+.mainUnit .modal .addModalTask .addModalTaskInput {
   width: 660px;
   height: 35px;
   border: 1px solid rgba(40, 40, 70, 0.1);
@@ -210,12 +210,12 @@ body {
   padding-left: 20px;
 }
 
-.mainUnit .tasksMain .modal .addModalTask .addModalTaskСategory {
+.mainUnit .modal .addModalTask .addModalTaskСategory {
   width: 200px;
   height: 64px;
 }
 
-.mainUnit .tasksMain .modal .addModalTask .addModalTaskСategory .addModalTaskInput {
+.mainUnit .modal .addModalTask .addModalTaskСategory .addModalTaskInput {
   width: 200px;
   height: 35px;
   border: 1px solid rgba(40, 40, 70, 0.1);
@@ -231,13 +231,13 @@ body {
   opacity: 0.5;
 }
 
-.mainUnit .tasksMain .modal .addModalTaskButton {
+.mainUnit .modal .addModalTaskButton {
   width: 660px;
   height: 64px;
   position: relative;
 }
 
-.mainUnit .tasksMain .modal .addModalTaskButton .Cancel {
+.mainUnit .modal .addModalTaskButton .Cancel {
   background: #f05454;
   border-radius: 8px;
   padding: 10px 25px;
@@ -253,7 +253,7 @@ body {
   cursor: pointer;
 }
 
-.mainUnit .tasksMain .modal .addModalTaskButton .Save {
+.mainUnit .modal .addModalTaskButton .Save {
   font-family: "Nunito";
   font-style: normal;
   font-weight: 600;
@@ -271,7 +271,7 @@ body {
   cursor: pointer;
 }
 
-.mainUnit .tasksMain .modal .Add {
+.mainUnit .modal .Add {
   background: #29a19c;
   border-radius: 8px;
   padding: 10px 25px;
@@ -288,7 +288,7 @@ body {
   cursor: pointer;
 }
 
-.mainUnit .tasksMain .addModalTaskDisplay {
+.mainUnit .addModalTaskDisplay {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -297,7 +297,7 @@ body {
           justify-content: space-between;
 }
 
-.mainUnit .tasksMain .modalNextClass {
+.mainUnit .modalNextClass {
   border: 3px solid white;
 }
 
@@ -485,7 +485,7 @@ body {
   width: 100%;
   height: 50px;
   margin: 10px 0;
-  background: rgba(41, 161, 156, 0.02);
+  background: rgba(41, 161, 156, 0.6);
   border: 1px solid rgba(40, 40, 70, 0.1);
   border-radius: 10px;
   cursor: pointer;
