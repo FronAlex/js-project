@@ -91,7 +91,6 @@ const addingTaskMouse = (e) => {
 
     if (e.target.classList == 'checkСontainer') {
 
-
         e.target.children[0].children[0].style.display = 'block';
         e.target.children[1].children[0].style.display = 'block';
         e.target.children[1].children[1].style.display = 'block';
@@ -122,48 +121,49 @@ var addModalTaskSelect = document.querySelector('.addModalTaskSelect');
 
 
 
-const removeCategory = (e) => {
+const removeCategory = () => {
 
     let inputCategoryDel = document.querySelector('.inputCategoryDel');
     inputCategoryDel.style.display = 'block';
     inputCategoryDel.focus();
 
-    inputCategoryDel.addEventListener('keyup', function (e) {
-
+    inputCategoryDel.addEventListener('keydown', function (e) {
 
         if (e.key === "Enter") {
-            var del = inputCategoryDel.value
-            let inputDel = inputCategoryDiv.children
+            let mark1 = document.querySelectorAll('.mark1');
+            let del = inputCategoryDel.value.trim();
 
-            for (var i of inputDel) {
+            for (var i of mark1) {
+                console.log(del)
+                console.log(i.textContent)
 
 
-
-                if (i.childNodes[3].innerText == del) {
-
-                    i.remove();
+                if (i.innerHTML.trim() == del) {
+                    console.log('tru')
+                    i.parentElement.remove();
                     inputCategoryDel.style.display = 'none';
+
+                    for (let index of addModalTaskSelect.children) {
+                        if (index.innerHTML.trim() == del) {
+                            console.log(index.innerHTML)
+                            index.remove();
+                        }
+                    };
+
                 } else {
-                    console.log('!!!!!')
+
+                    console.log('!!!!')
+                    inputCategoryDel.style.display = 'none';
+
+                }
+                if (inputCategoryDel.value.trim() == '') {
+                    inputCategoryDel.value = '';
+                    inputCategoryDel.style.display = 'none';
                 }
 
             }
-            for (let index of addModalTaskSelect.children) {
-                if (index.innerHTML == del) {
-                    index.remove();
-                }
-
-            }
-            if (inputCategoryDel.value.trim() == '') {
-                inputCategoryDel.value = '';
-                inputCategoryDel.style.display = 'none';
-            }
-
         }
     });
-
-
-
 
     inputCategoryDel.addEventListener("blur", function (event) {
         event.target.style.display = 'none';
@@ -174,13 +174,12 @@ const removeCategory = (e) => {
 
 
 
-
 var inputCategoryDiv = document.querySelector('.inputCategoryDiv');
 var addTasks = document.querySelector('.addTasks');
-
+var inputCategory = document.querySelector('.inputCategory');
 
 const addCategory = () => {
-    var inputCategory = document.querySelector('.inputCategory');
+
     inputCategory.style.display = 'block';
     inputCategory.focus();
 
@@ -189,7 +188,6 @@ const addCategory = () => {
 
 
         if (e.key === "Enter") {
-
 
             if (inputCategory.value.trim() !== '') {
 
@@ -208,7 +206,7 @@ const addCategory = () => {
                     inputCategoryDiv.innerHTML += `
                     <div class="subcategory subcategoryRemove pAdd">
                 <p>NEW:</p>
-                <div class="pAdd mark mark1">${inputCategory.value} </div>
+                <div class="pAdd mark mark1">${inputCategory.value}</div>
                 <p class="illumination"></p>
                
                 </div>
@@ -233,8 +231,9 @@ const addCategory = () => {
             } else if (inputCategory.value.trim() == '') {
                 inputCategory.value = '';
                 inputCategory.style.display = 'none';
-            }
-        }
+            };
+
+        };
     });
 
     inputCategory.addEventListener("blur", function (event) {
