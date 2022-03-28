@@ -102,7 +102,7 @@
 
                 <div class="exid_menu" id="output">
                     <img class="ico3 imgMoon" src="../images/log-in.svg" alt="log-in">
-                    <div class="exidHover pAdd">Выйти</div>
+                    <div class="exidHover pAdd" id="exitButton">Выйти</div>
                 </div>
             </div>
         </div>
@@ -337,12 +337,19 @@
 
                         <img src="../images/Line chart.png" class="observationImg ">
                     </div>
-
+                </div>
             </section>
         </div>
 
     </section>
     <div class="modalStyle"></div>
+    <div id="modalWindows" class="addClass">
+        <p class="modalWindowsP">Вы хотите выйти?</p>
+        <div class="modalWindowsButton">
+            <button class="modalWindowsButton1" id="yes">Да</button>
+            <button class="modalWindowsButton1" id="no">Нет</button>
+        </div>
+    </div>
 
 
     <script src="../js/timeData.js"></script>

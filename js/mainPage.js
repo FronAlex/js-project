@@ -247,4 +247,34 @@ const addCategory = () => {
 addTasks.addEventListener('click', addCategory);
 
 
+document.querySelector('#exitButton').addEventListener('dblclick', () => {
+    modalStyle.style.width = '100%';
+
+    if (dark.dataset.pic !== 'num') {
+        modalStyle.style.backgroundColor = 'rgb(116 181 184)';
+    } else {
+        modalStyle.style.backgroundColor = '#2b3267';
+    }
+
+    let modalWindows = document.querySelector('#modalWindows');
+
+    modalWindows.style.display = 'block';
+});
+
+
+
+document.querySelector('#no').addEventListener('click', () => {
+    modalStyle.style.width = '0';
+    modalWindows.style.display = 'none';
+});
+
+
+
+document.querySelector('#yes').addEventListener('click', () => {
+
+    localStorage.removeItem('token');
+    window.location.replace("index.html");
+});
+
+
 

@@ -23,8 +23,21 @@ const createAccountData = (event) => {
 
     localStorage.setItem('accounts', JSON.stringify(currentAccounts));
 
+    /* const generateToken = () => {
+        var length = 8,
+            charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+            retVal = "";
+        for (let i = 0, n = charset.length; i < length; ++i) {
+            retVal += charset.charAt(Math.floor(Math.random() * n));
+        }
+        return retVal;
+    };
+
+    localStorage.setItem('token', generateToken()); */
+
     userEmail.value = '';
     userPassword.value = '';
+
 
     window.location.replace("index.html");
 
@@ -115,25 +128,44 @@ const writeAccountData = (event) => {
     for (let i of currentAccounts) {
 
         if (i.userPassword === userPassword.trim() && i.userEmail === userName.trim()) {
-            console.log('uppaaa');
+
             window.location.replace("mainPage.html");
             userName = '';
             userPassword = '';
-        }
-
+        };
 
 
 
 
     }
 
-    userName = '';
-    userPassword = '';
+    const generateToken = () => {
+        var length = 8,
+            charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+            retVal = "";
+        for (let i = 0, n = charset.length; i < length; ++i) {
+            retVal += charset.charAt(Math.floor(Math.random() * n));
+        }
+        return retVal;
+    };
+
+    localStorage.setItem('token', generateToken());
+
+
+    const del = () => {
+        document.querySelector('#email').value = '';
+        document.querySelector('#password').value = '';
+    };
+
+
+    setTimeout(del, 100);
+
+
 
 };
 
 
-const checkUser = (allUsers, userData) => {
+/* const checkUser = (allUsers, userData) => {
     const checkUser = allUsers.filter((user) => {
         return (
             user.userEmail === userData.userEmail &&
@@ -147,6 +179,6 @@ const checkUser = (allUsers, userData) => {
         window.location.href = "mainPage.html";
         sessionStorage.setItem('user-token', generateToken());
         return true;
-    }
+    } 
 
-}
+}*/
