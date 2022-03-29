@@ -6,10 +6,10 @@ let illumination = document.getElementsByClassName('illumination');
 let modal = document.querySelector('.modal');
 let modalStyle = document.querySelector('.modalStyle');
 let checkСontainer = document.querySelector('#checkСontainer');
-let checkСontainer1 = document.querySelector('#checkСontainer1');
+let checkСontainer1 = document.querySelector('.checkСontainer1');
 let addModalTaskInput = document.querySelector('#addModalTaskInput');
 let Add = document.querySelector('.Add');
-let activeTasks = document.querySelector('.activeTasks');
+
 
 
 const markIllumination = (e) => {
@@ -38,6 +38,7 @@ const newTaskButton = () => {
     } else {
         modalStyle.style.backgroundColor = '#2b3267';
     }
+    addModalTaskInput.focus();
 }
 
 const TaskCancel = () => {
@@ -53,20 +54,20 @@ newTaskCancel.addEventListener('click', TaskCancel);
 
 const addingTask = () => {
 
-
     let value = addModalTaskInput.value.trim();
 
     if (value !== '') {
 
-        checkСontainer.innerHTML += (`<div class="checkСontainer">
+        checkСontainer.innerHTML += (`<div class="checkСontainer" data-pac='1'>
     <div class="check">
         <input class="checkbox removeNone" type="checkbox">
         <p class="checkP pAdd">${value}</p>
+        <input class="textReplacement" placeholder="Замена задачи" type="text" maxlength="30">
     </div>
 
     <div class="removal">
-        <img src="../images/edit.svg" class="removalImg imgMoon removeNone" alt="edit">
-        <img src="../images/trash.svg" class="removalImg removeNone" alt="trash">
+        <img src="../images/edit.svg" class="removalImg imgMoon removeNone removDel" alt="edit">
+        <img src="../images/trash.svg" class="removalImg removeNone del" alt="trash">
     </div>
 </div>`);
 
@@ -75,51 +76,176 @@ const addingTask = () => {
 
     addModalTaskInput.value = '';
     TaskCancel();
+
+    let container = document.getElementsByClassName('checkСontainer');
+    for (let i of container) {
+        i.addEventListener('mouseenter', addingTaskMouse);
+        i.addEventListener('mouseleave', removeTaskMouse);
+    }
+
+    let del = document.getElementsByClassName('del');
+
+    if (del.length > 1) {
+        for (let i of del) {
+            i.addEventListener('click', imgDel);
+        }
+    } else if (value !== '') {
+
+        del[0].addEventListener('click', imgDel);
+    };
+
+
+    let removDel = document.getElementsByClassName('removDel');
+
+    if (removDel.length > 1) {
+        for (let i of removDel) {
+            i.addEventListener('click', imgRemov);
+        }
+    } else {
+
+        removDel[0].addEventListener('click', imgRemov);
+    };
+
+
+    let checkbox = document.getElementsByClassName("checkbox");
+    if (checkbox.length > 1) {
+        for (let i of checkbox) {
+            i.addEventListener('change', checkedBox);
+        }
+    } else {
+
+        checkbox[0].addEventListener('change', checkedBox);
+    };
+
+
 };
+
 
 Add.addEventListener('click', addingTask);
 
 
+let removeNone = document.getElementsByClassName('removeNone');
 const addingTaskMouse = (e) => {
-    let removeNone = document.querySelectorAll('.removeNone');
 
     for (let i of removeNone) {
         i.style.display = 'none';
     }
 
-
-
-    if (e.target.classList == 'checkСontainer') {
+    if (e.target.dataset.pac == '1') {
 
         e.target.children[0].children[0].style.display = 'block';
         e.target.children[1].children[0].style.display = 'block';
         e.target.children[1].children[1].style.display = 'block';
         e.target.style.backgroundColor = '#33f0df54';
-    }
-    else {
+    };
+};
 
 
+const removeTaskMouse = (e) => {
+
+    if (e.target.dataset.pac == '1') {
+
+
+        for (let i of removeNone) {
+            i.style.display = 'none';
+
+        }
 
         let listСontainer = document.querySelectorAll('.checkСontainer');
 
         for (let i of listСontainer) {
             i.style.backgroundColor = 'rgba(155 233 230 / 85%)';
-        }
 
+        };
+        e.target.children[0].children[2].style.display = 'none';
+        e.target.children[0].children[2].value = '';
+    };
+};
+
+
+let textReplacement = document.getElementsByClassName('textReplacement');
+
+
+const imgRemov = (e) => {
+
+
+    e.target.parentElement.parentElement.children[0].children[2].style.display = 'block';
+    e.target.parentElement.parentElement.children[0].children[2].focus();
+
+    for (let i of textReplacement) {
+
+        i.addEventListener('keyup', (e) => {
+
+
+            if (e.key === "Enter") {
+
+
+                if (e.target.parentElement.parentElement.children[0].children[2].value !== '') {
+                    e.target.parentElement.parentElement.children[0].children[1].innerHTML = e.target.parentElement.parentElement.children[0].children[2].value;
+                    e.target.parentElement.parentElement.children[0].children[2].value = '';
+                    e.target.parentElement.parentElement.children[0].children[2].style.display = 'none';
+                }
+            }
+        });
     }
 
+};
 
+
+//////////////////////////////////////////////////////////////
+
+
+const checkedBox = (e) => {
+
+
+
+
+    if (e.target.checked) {
+
+        let meaning = e.target.parentElement.children[1].innerHTML;
+        e.target.parentElement.parentElement.remove();
+
+        checkСontainer1.innerHTML += (`<div class="checkСontainer" data-pac='1'>
+        <div class="check">
+            <input class="checkbox removeNone" type="checkbox">
+            <p class="checkP pAdd">${meaning}</p>
+            <input class="textReplacement" placeholder="Замена задачи" type="text" maxlength="30">
+        </div>
+    
+        <div class="removal">
+            <img src="../images/edit.svg" class="removalImg imgMoon removeNone removDel" alt="edit">
+            <img src="../images/trash.svg" class="removalImg removeNone del" alt="trash">
+        </div>
+    </div>`);
+
+        console.log(checkСontainer1);
+
+        let container = document.getElementsByClassName('checkСontainer');
+        for (let i of container) {
+            i.addEventListener('mouseenter', addingTaskMouse);
+            i.addEventListener('mouseleave', removeTaskMouse);
+        }
+
+
+    } else {
+
+        e.target.parentElement.children[1].style.textDecoration = 'none'
+        console.log("Checkbox is not checked..");
+    }
 }
 
-activeTasks.addEventListener('mouseover', addingTaskMouse);
+
+
+
+
+const imgDel = (e) => {
+    e.target.parentElement.parentElement.remove();
+};
+
 
 
 var subcategoryRemove = document.getElementsByClassName('subcategoryRemove');
 var addModalTaskSelect = document.querySelector('.addModalTaskSelect');
-
-
-
-
 
 const removeCategory = () => {
 

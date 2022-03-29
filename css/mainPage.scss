@@ -368,8 +368,8 @@ body {
                 width: 100%;
                 height: 50px;
                 margin: 10px 0;
-                background: rgba(155 233 230/83%);
-                border: 1px solid rgba(40, 40, 70, 0.1);
+                background: #9be9e6d4;
+                border: 1px solid #2929471a;
                 border-radius: 10px;
                 cursor: pointer;
                 .check {
@@ -512,4 +512,9 @@ body {
 }
 .removNone {
     display: block;
+}
+.textReplacement {
+    display: none;
+    width: 100px;
+    margin-left: 10px;
 }
