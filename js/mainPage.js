@@ -52,6 +52,9 @@ newTask.addEventListener('click', newTaskButton);
 newTaskCancel.addEventListener('click', TaskCancel);
 
 
+
+
+
 const addingTask = () => {
 
     let value = addModalTaskInput.value.trim();
@@ -102,8 +105,8 @@ const addingTask = () => {
         for (let i of removDel) {
             i.addEventListener('click', imgRemov);
         }
-    } else {
-
+    } else if (removDel.length !== 0) {
+        console.log(removDel.length)
         removDel[0].addEventListener('click', imgRemov);
     };
 
@@ -113,7 +116,7 @@ const addingTask = () => {
         for (let i of checkbox) {
             i.addEventListener('change', checkedBox);
         }
-    } else {
+    } else if (checkbox.length !== 0) {
 
         checkbox[0].addEventListener('change', checkedBox);
     };
@@ -199,8 +202,6 @@ const imgRemov = (e) => {
 const checkedBox = (e) => {
 
 
-
-
     if (e.target.checked) {
 
         let meaning = e.target.parentElement.children[1].innerHTML;
@@ -208,13 +209,13 @@ const checkedBox = (e) => {
 
         checkСontainer1.innerHTML += (`<div class="checkСontainer" data-pac='1'>
         <div class="check">
-            <input class="checkbox removeNone" type="checkbox">
+            <input class="checkbox  diplay" type="checkbox">
             <p class="checkP pAdd">${meaning}</p>
             <input class="textReplacement" placeholder="Замена задачи" type="text" maxlength="30">
         </div>
     
         <div class="removal">
-            <img src="../images/edit.svg" class="removalImg imgMoon removeNone removDel" alt="edit">
+            <img src="../images/edit.svg" class="diplay " alt="edit">
             <img src="../images/trash.svg" class="removalImg removeNone del1" alt="trash">
         </div>
     </div>`);
@@ -238,10 +239,6 @@ const checkedBox = (e) => {
         }
 
 
-    } else {
-
-        e.target.parentElement.children[1].style.textDecoration = 'none'
-        console.log("Checkbox is not checked..");
     }
 }
 
@@ -333,8 +330,17 @@ const addCategory = () => {
 
 
                 if (dark.dataset.pic == 'num') {
+
+                    let subcategory = document.getElementsByClassName('subcategory');
+
+                    let check = 1;
+                    for (let i of subcategory) {
+
+                        check++;
+                    };
+
                     inputCategoryDiv.innerHTML += `
-                    <div class="subcategory subcategoryRemove pAdd addP">
+                    <div class="subcategory subcategoryRemove pAdd addP" data-container="${check}">
                 <p>NEW:</p>
                 <div class="pAdd mark mark1">${inputCategory.value} </div>
                 <p class="illumination"></p>
@@ -343,10 +349,18 @@ const addCategory = () => {
                 `
 
                 } else {
+                    let subcategory = document.getElementsByClassName('subcategory');
+
+                    let check = 1;
+                    for (let i of subcategory) {
+
+                        check++;
+                    };
+
                     inputCategoryDiv.innerHTML += `
-                    <div class="subcategory subcategoryRemove pAdd">
+                    <div class="subcategory subcategoryRemove pAdd " data-container="${check}">
                 <p>NEW:</p>
-                <div class="pAdd mark mark1">${inputCategory.value}</div>
+                <div class="pAdd mark mark1">${inputCategory.value} </div>
                 <p class="illumination"></p>
                
                 </div>
@@ -359,11 +373,16 @@ const addCategory = () => {
                 for (let index of subcategoryRemove) {
                     index.addEventListener('dblclick', removeCategory);
 
-                }
+                };
 
+                let count = 1;
+                for (let index of addModalTaskSelect.children) {
+
+                    count++;
+                };
 
                 addModalTaskSelect.innerHTML += `
-                <option value="4">${inputCategory.value}</option> `
+                <option value ='${count}'>${inputCategory.value}</option> `
 
                 inputCategory.value = '';
                 inputCategory.style.display = 'none';

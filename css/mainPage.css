@@ -731,4 +731,8 @@ body {
   height: 25px;
   width: 37px;
 }
+
+.diplay {
+  display: none !important;
+}
 /*# sourceMappingURL=mainPage.css.map */
