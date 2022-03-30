@@ -83,8 +83,8 @@ const addingTask = () => {
         i.addEventListener('mouseleave', removeTaskMouse);
     }
 
-    let del = document.getElementsByClassName('del');
 
+    let del = document.getElementsByClassName('del');
     if (del.length > 1) {
         for (let i of del) {
             i.addEventListener('click', imgDel);
@@ -93,6 +93,7 @@ const addingTask = () => {
 
         del[0].addEventListener('click', imgDel);
     };
+
 
 
     let removDel = document.getElementsByClassName('removDel');
@@ -214,11 +215,21 @@ const checkedBox = (e) => {
     
         <div class="removal">
             <img src="../images/edit.svg" class="removalImg imgMoon removeNone removDel" alt="edit">
-            <img src="../images/trash.svg" class="removalImg removeNone del" alt="trash">
+            <img src="../images/trash.svg" class="removalImg removeNone del1" alt="trash">
         </div>
     </div>`);
 
-        console.log(checkСontainer1);
+        let del1 = document.getElementsByClassName('del1')
+
+        for (let i of del1) {
+
+            i.addEventListener('click', imgDelListen);
+        }
+        for (let i of del1) {
+            console.log(i.parentElement.parentElement.children[0].children[1])
+            i.parentElement.parentElement.children[0].children[1].style.textDecoration = 'line-through';
+        };
+
 
         let container = document.getElementsByClassName('checkСontainer');
         for (let i of container) {
@@ -236,6 +247,9 @@ const checkedBox = (e) => {
 
 
 
+const imgDelListen = (e) => {
+    e.path[2].remove();
+};
 
 
 const imgDel = (e) => {
