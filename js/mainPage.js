@@ -419,12 +419,32 @@ addTasks.addEventListener('click', addCategory);
 
 
 const subcategoryLocal = () => {
-
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     let tasks = JSON.parse(
         localStorage.getItem('category'));
-    console.log(tasks)
+
     if (tasks !== null) {
         inputCategoryDiv.innerHTML += tasks;
+
+
+
+
+
+
+        for (let index of subcategoryRemove) {
+
+            let count = 1;
+            for (let index of addModalTaskSelect.children) {
+
+                count++;
+            };
+            console.log(index.children[1].outerText)
+            console.log(count)
+            addModalTaskSelect.innerHTML += `
+         <option value ='${count}'>${index.children[1].outerText}</option> `
+        };
+
+
 
         for (let index of subcategoryRemove) {
             index.addEventListener('dblclick', removeCategory);
@@ -472,8 +492,11 @@ const localTasksMemory = () => {
 
 };
 
+
+let subcategory = document.getElementsByClassName('subcategory');
+
 const localTasksReceive = () => {
-    let subcategory = document.getElementsByClassName('subcategory');
+
 
     checkСontainer.innerHTML = '';
     checkСontainer1.innerHTML = '';
@@ -580,4 +603,28 @@ document.querySelector('#yes').addEventListener('click', () => {
 });
 
 
+const merger = () => {
 
+    //   console.log(addModalTaskSelect.value)
+
+
+    for (let i of subcategory) {
+
+
+        if (addModalTaskSelect.value == i.dataset.container) {
+
+            console.log(i)
+
+            document.querySelectorAll('.pAdd')[addModalTaskSelect.value - 1].click();
+
+        };
+
+    };
+
+
+};
+
+
+addModalTaskSelect.addEventListener('change', merger);
+
+//change
