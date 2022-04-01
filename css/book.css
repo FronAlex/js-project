@@ -225,6 +225,7 @@
 }
 .mark1 {
     margin-left: 10px;
+    min-width: 50px;
 }
 
 .butRemove {

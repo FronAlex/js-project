@@ -19,6 +19,7 @@ const markIllumination = (e) => {
     };
 
     e.target.parentElement.children[2].style.display = 'block';
+    localTasksReceive();
 }
 
 const markIlluminationFunction = () => {
@@ -106,7 +107,7 @@ const addingTask = () => {
             i.addEventListener('click', imgRemov);
         }
     } else if (removDel.length !== 0) {
-        console.log(removDel.length)
+
         removDel[0].addEventListener('click', imgRemov);
     };
 
@@ -121,7 +122,7 @@ const addingTask = () => {
         checkbox[0].addEventListener('change', checkedBox);
     };
 
-
+    localTasksMemory();
 };
 
 
@@ -188,6 +189,7 @@ const imgRemov = (e) => {
                     e.target.parentElement.parentElement.children[0].children[1].innerHTML = e.target.parentElement.parentElement.children[0].children[2].value;
                     e.target.parentElement.parentElement.children[0].children[2].value = '';
                     e.target.parentElement.parentElement.children[0].children[2].style.display = 'none';
+                    localTasksMemory();
                 }
             }
         });
@@ -196,7 +198,7 @@ const imgRemov = (e) => {
 };
 
 
-//////////////////////////////////////////////////////////////
+
 
 
 const checkedBox = (e) => {
@@ -240,17 +242,20 @@ const checkedBox = (e) => {
 
 
     }
+    localTasksMemory();
 }
 
 
 
 const imgDelListen = (e) => {
     e.path[2].remove();
+    localTasksMemory();
 };
 
 
 const imgDel = (e) => {
     e.target.parentElement.parentElement.remove();
+    localTasksMemory();
 };
 
 
@@ -271,12 +276,10 @@ const removeCategory = () => {
             let del = inputCategoryDel.value.trim();
 
             for (var i of mark1) {
-                console.log(del)
-                console.log(i.textContent)
 
 
                 if (i.innerHTML.trim() == del) {
-                    console.log('tru')
+
                     i.parentElement.remove();
                     inputCategoryDel.style.display = 'none';
 
@@ -298,8 +301,12 @@ const removeCategory = () => {
                     inputCategoryDel.style.display = 'none';
                 }
 
+                let sub = inputCategoryDiv.innerHTML
+                localStorage.setItem('category', JSON.stringify(sub));
+
             }
         }
+
     });
 
     inputCategoryDel.addEventListener("blur", function (event) {
@@ -370,6 +377,11 @@ const addCategory = () => {
                 markIlluminationFunction();
 
 
+
+                let sub = inputCategoryDiv.innerHTML
+                localStorage.setItem('category', JSON.stringify(sub));
+
+
                 for (let index of subcategoryRemove) {
                     index.addEventListener('dblclick', removeCategory);
 
@@ -401,10 +413,142 @@ const addCategory = () => {
     }, true);
 
 
-}
+};
 
 addTasks.addEventListener('click', addCategory);
 
+
+const subcategoryLocal = () => {
+
+    let tasks = JSON.parse(
+        localStorage.getItem('category'));
+    console.log(tasks)
+    if (tasks !== null) {
+        inputCategoryDiv.innerHTML += tasks;
+
+        for (let index of subcategoryRemove) {
+            index.addEventListener('dblclick', removeCategory);
+
+        };
+        markIlluminationFunction();
+    };
+};
+
+subcategoryLocal();
+
+/* const subcategoryLocalWithdraw = () => {
+
+    var inputCategoryDiv = document.getElementsByClassName('inputCategoryDiv');
+
+    let tasks = JSON.parse(
+        localStorage.getItem('subcategory'));
+    console.log(tasks)
+    inputCategoryDiv.innerHTML += tasks;
+
+};
+subcategoryLocalWithdraw(); */
+
+
+
+
+const localTasksMemory = () => {
+
+    let subcategory = document.getElementsByClassName('subcategory');
+
+    for (let i of subcategory) {
+
+        if (i.children[2].style.display == 'block') {
+            let num = i.dataset.container;
+
+            let obj = {
+                checkСontainer: checkСontainer.innerHTML,
+                checkСontainer1: checkСontainer1.innerHTML
+            };
+
+            localStorage.setItem(num, JSON.stringify(obj));
+
+        };
+    };
+
+};
+
+const localTasksReceive = () => {
+    let subcategory = document.getElementsByClassName('subcategory');
+
+    checkСontainer.innerHTML = '';
+    checkСontainer1.innerHTML = '';
+
+    for (let i of subcategory) {
+
+        if (i.children[2].style.display == 'block') {
+            let num = i.dataset.container;
+
+
+            let tasks = JSON.parse(
+                localStorage.getItem(num));
+
+
+            if (tasks !== null) {
+
+
+                checkСontainer.innerHTML = tasks.checkСontainer;
+                checkСontainer1.innerHTML = tasks.checkСontainer1;
+            };
+
+            let container = document.getElementsByClassName('checkСontainer');
+            for (let i of container) {
+                i.addEventListener('mouseenter', addingTaskMouse);
+                i.addEventListener('mouseleave', removeTaskMouse);
+            }
+
+
+            let del = document.getElementsByClassName('del');
+            if (del.length > 1) {
+                for (let i of del) {
+                    i.addEventListener('click', imgDel);
+                }
+            }
+            if (del.length == 1) {
+
+                del[0].addEventListener('click', imgDel);
+            };
+
+
+            let removDel = document.getElementsByClassName('removDel');
+
+            if (removDel.length > 1) {
+                for (let i of removDel) {
+                    i.addEventListener('click', imgRemov);
+                }
+            } else if (removDel.length !== 0) {
+
+                removDel[0].addEventListener('click', imgRemov);
+            };
+
+            let del1 = document.getElementsByClassName('del1')
+
+            for (let i of del1) {
+
+                i.addEventListener('click', imgDelListen);
+            }
+
+
+            let checkbox = document.getElementsByClassName("checkbox");
+            if (checkbox.length > 1) {
+                for (let i of checkbox) {
+                    i.addEventListener('change', checkedBox);
+                }
+            } else if (checkbox.length !== 0) {
+
+                checkbox[0].addEventListener('change', checkedBox);
+            };
+
+        };
+    };
+
+};
+
+localTasksReceive();
 
 document.querySelector('#exitButton').addEventListener('dblclick', () => {
     modalStyle.style.width = '100%';
