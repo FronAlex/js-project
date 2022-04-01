@@ -123,6 +123,7 @@ const addingTask = () => {
     };
 
     localTasksMemory();
+    Created();
 };
 
 
@@ -243,6 +244,7 @@ const checkedBox = (e) => {
 
     }
     localTasksMemory();
+    Completed();
 }
 
 
@@ -250,12 +252,14 @@ const checkedBox = (e) => {
 const imgDelListen = (e) => {
     e.path[2].remove();
     localTasksMemory();
+    Removed();
 };
 
 
 const imgDel = (e) => {
     e.target.parentElement.parentElement.remove();
     localTasksMemory();
+    Removed();
 };
 
 
@@ -419,17 +423,12 @@ addTasks.addEventListener('click', addCategory);
 
 
 const subcategoryLocal = () => {
-    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
     let tasks = JSON.parse(
         localStorage.getItem('category'));
 
     if (tasks !== null) {
         inputCategoryDiv.innerHTML += tasks;
-
-
-
-
-
 
         for (let index of subcategoryRemove) {
 
@@ -605,15 +604,9 @@ document.querySelector('#yes').addEventListener('click', () => {
 
 const merger = () => {
 
-    //   console.log(addModalTaskSelect.value)
-
-
     for (let i of subcategory) {
 
-
         if (addModalTaskSelect.value == i.dataset.container) {
-
-            console.log(i)
 
             document.querySelectorAll('.pAdd')[addModalTaskSelect.value - 1].click();
 
@@ -627,4 +620,96 @@ const merger = () => {
 
 addModalTaskSelect.addEventListener('change', merger);
 
-//change
+
+const Created = () => {
+    let first = document.querySelector('#Created');
+
+    let tasks = JSON.parse(
+        localStorage.getItem('count'));
+
+    console.log(tasks);
+    if (tasks == null) {
+        tasks = 0;
+    };
+
+    tasks++;
+    localStorage.setItem('count', JSON.stringify(tasks));
+
+
+
+    first.innerHTML = tasks;
+};
+
+const Completed = () => {
+
+    let tasks = JSON.parse(
+        localStorage.getItem('count1'));
+    console.log(tasks);
+    if (tasks == null) {
+        tasks = 0;
+    };
+
+    tasks++;
+    localStorage.setItem('count1', JSON.stringify(tasks));
+
+    let first = document.querySelector('#Completed');
+
+    first.innerHTML = tasks;
+};
+
+const Removed = () => {
+
+    let tasks = JSON.parse(
+        localStorage.getItem('count2'));
+    console.log(tasks);
+    if (tasks == null) {
+        tasks = 0;
+    };
+
+    tasks++;
+    localStorage.setItem('count2', JSON.stringify(tasks));
+
+    let first = document.querySelector('#Removed');
+
+    first.innerHTML = tasks;
+};
+
+
+
+const update = () => {
+    let first2 = document.querySelector('#Removed');
+    let first1 = document.querySelector('#Completed');
+    let first = document.querySelector('#Created');
+
+
+    let tasks = JSON.parse(
+        localStorage.getItem('count'));
+
+    let tasks1 = JSON.parse(
+        localStorage.getItem('count1'));
+
+    let tasks2 = JSON.parse(
+        localStorage.getItem('count2'));
+
+
+    if (tasks == null) {
+        tasks = 0;
+    }
+
+    if (tasks1 == null) {
+        tasks1 = 0;
+    }
+
+    if (tasks2 == null) {
+        tasks2 = 0;
+    }
+
+
+
+    first.innerHTML = tasks;
+    first1.innerHTML = tasks1;
+    first2.innerHTML = tasks2;
+
+};
+
+update();
