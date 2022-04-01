@@ -1,6 +1,4 @@
 
-console.log(localStorage.getItem('token'));
-
 if (localStorage.getItem('token')) {
     window.location.replace("mainPage.html");
 };

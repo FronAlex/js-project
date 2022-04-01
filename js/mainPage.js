@@ -296,7 +296,7 @@ const removeCategory = () => {
 
                 } else {
 
-                    console.log('!!!!')
+
                     inputCategoryDel.style.display = 'none';
 
                 }
@@ -437,8 +437,7 @@ const subcategoryLocal = () => {
 
                 count++;
             };
-            console.log(index.children[1].outerText)
-            console.log(count)
+
             addModalTaskSelect.innerHTML += `
          <option value ='${count}'>${index.children[1].outerText}</option> `
         };
@@ -449,25 +448,11 @@ const subcategoryLocal = () => {
             index.addEventListener('dblclick', removeCategory);
 
         };
-        markIlluminationFunction();///////////////////////////////////////////////////////////////////////////////////////
+        markIlluminationFunction();
     };
 };
 
 subcategoryLocal();
-
-/* const subcategoryLocalWithdraw = () => {
- 
-    var inputCategoryDiv = document.getElementsByClassName('inputCategoryDiv');
- 
-    let tasks = JSON.parse(
-        localStorage.getItem('subcategory'));
-    console.log(tasks)
-    inputCategoryDiv.innerHTML += tasks;
- 
-};
-subcategoryLocalWithdraw(); */
-
-
 
 
 const localTasksMemory = () => {
@@ -715,3 +700,28 @@ const update = () => {
 };
 
 update();
+
+/* const background = () => {
+    let menu = document.querySelector('.dark');
+
+
+
+    let tasks = JSON.parse(
+        localStorage.getItem('background'));
+
+
+
+    if (tasks == 'true') {
+        menu.textContent().click();
+        console.log(menu);
+        console.log('111111111');
+
+
+
+    };
+};
+ */
+
+
+/* background(); */
+

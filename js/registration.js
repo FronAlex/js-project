@@ -41,34 +41,37 @@ const writeAccountData = (event) => {
 
     let currentAccounts = JSON.parse(
         localStorage.getItem('accounts'));
+    console.log(currentAccounts)
+    if (currentAccounts !== null) {
+        for (let i of currentAccounts) {
 
-    for (let i of currentAccounts) {
+            if (i.userPassword === userPassword.trim() && i.userEmail === userName.trim()) {
 
-        if (i.userPassword === userPassword.trim() && i.userEmail === userName.trim()) {
+                window.location.replace("mainPage.html");
+                userName = '';
+                userPassword = '';
+            } else {
+                del();
 
-            window.location.replace("mainPage.html");
-            userName = '';
-            userPassword = '';
-        } else {
-            del();
+            };
 
+        }
+
+        const generateToken = () => {
+            var length = 8,
+                charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+                retVal = "";
+            for (let i = 0, n = charset.length; i < length; ++i) {
+                retVal += charset.charAt(Math.floor(Math.random() * n));
+            }
+            return retVal;
         };
 
+        localStorage.setItem('token', generateToken());
+
+    } else {
+        del();
     }
-
-    const generateToken = () => {
-        var length = 8,
-            charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
-            retVal = "";
-        for (let i = 0, n = charset.length; i < length; ++i) {
-            retVal += charset.charAt(Math.floor(Math.random() * n));
-        }
-        return retVal;
-    };
-
-    localStorage.setItem('token', generateToken());
-
-
 
 
 

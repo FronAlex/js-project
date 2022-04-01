@@ -17,14 +17,14 @@ let tasks = document.querySelector('.tasks');
 const exidMenu = () => {
     for (let i of addOutput) {
         i.style.marginLeft = '0 ';
-    }
-}
+    };
+};
 
 const exidMause = () => {
     for (let i of addOutput) {
         i.style.marginLeft = '-600px';
-    }
-}
+    };
+};
 
 
 output.addEventListener('mouseover', exidMenu);
@@ -40,27 +40,27 @@ const darkTheme = () => {
         for (let i of imgMoon) {
             let y = i.src.replace('svg', 'png');
             i.setAttribute('src', y);
-        }
+        };
 
         for (let i of eleps) {
             i.classList.toggle('addPEl');
-        }
+        };
         for (let i of addP) {
             i.classList.toggle('addP');
-        }
+        };
         for (let i of addClass) {
             i.classList.toggle('nextAdd');
-        }
+        };
         body.classList.toggle('bodyClass');
 
-        console.log(tasks.getAttribute('id'));
+
         if (tasks.getAttribute('id') == 'idTasks') {
 
         } else {
             modal.classList.toggle('modalNextClass');
 
-        }
-
+        };
+        localStorage.setItem('background', JSON.stringify('true'));
 
     } else {
 
@@ -68,28 +68,30 @@ const darkTheme = () => {
         for (let i of imgMoon) {
             let y = i.src.replace('png', 'svg');
             i.setAttribute('src', y)
-        }
+        };
 
 
         for (let i of eleps) {
             i.classList.toggle('addPEl');
-        }
+        };
         for (let i of addP) {
             i.classList.toggle('addP');
-        }
+        };
         for (let i of addClass) {
             i.classList.toggle('nextAdd');
-        }
+        };
         body.classList.toggle('bodyClass');
-        /*      modal.classList.toggle('modalNextClass'); */
 
         if (tasks.getAttribute('id') == 'idTasks') {
 
         } else {
             modal.classList.toggle('modalNextClass');
-        }
-    }
-}
+        };
+
+        localStorage.setItem('background', JSON.stringify('false'));
+    };
+};
 
 dark.addEventListener('click', darkTheme);
 imgMoonDay.addEventListener('click', darkTheme);
+
