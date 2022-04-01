@@ -449,21 +449,21 @@ const subcategoryLocal = () => {
             index.addEventListener('dblclick', removeCategory);
 
         };
-        markIlluminationFunction();
+        markIlluminationFunction();///////////////////////////////////////////////////////////////////////////////////////
     };
 };
 
 subcategoryLocal();
 
 /* const subcategoryLocalWithdraw = () => {
-
+ 
     var inputCategoryDiv = document.getElementsByClassName('inputCategoryDiv');
-
+ 
     let tasks = JSON.parse(
         localStorage.getItem('subcategory'));
     console.log(tasks)
     inputCategoryDiv.innerHTML += tasks;
-
+ 
 };
 subcategoryLocalWithdraw(); */
 
@@ -603,12 +603,14 @@ document.querySelector('#yes').addEventListener('click', () => {
 
 
 const merger = () => {
-
+    console.log(subcategory)
     for (let i of subcategory) {
 
         if (addModalTaskSelect.value == i.dataset.container) {
+            console.log(addModalTaskSelect.value)
+            console.log(i.dataset.container)
 
-            document.querySelectorAll('.pAdd')[addModalTaskSelect.value - 1].click();
+            document.querySelectorAll('.mark')[addModalTaskSelect.value - 1].click();
 
         };
 

@@ -29,6 +29,11 @@ const createAccountData = (event) => {
 
 }
 
+const del = () => {
+    document.querySelector('#email').value = '';
+    document.querySelector('#password').value = '';
+};
+
 const writeAccountData = (event) => {
     event.preventDefault();
     let userName = document.querySelector('#email').value;
@@ -44,6 +49,9 @@ const writeAccountData = (event) => {
             window.location.replace("mainPage.html");
             userName = '';
             userPassword = '';
+        } else {
+            del();
+
         };
 
     }
@@ -61,13 +69,10 @@ const writeAccountData = (event) => {
     localStorage.setItem('token', generateToken());
 
 
-    const del = () => {
-        document.querySelector('#email').value = '';
-        document.querySelector('#password').value = '';
-    };
 
 
-    setTimeout(del, 100);
+
+    /*  setTimeout(del, 100); */
 
 
 
